@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<html>
 		<head>
 			<meta charset="UTF-8">
@@ -6,7 +6,8 @@
 			<link rel="stylesheet" type="text/css" href="theme.css">
 		</head>
 		<body>
+		<?php include('menu.php'); ?>
 			<h1> Test</h1>
-				<p>õäöütretest test</p>
+				<p>õäöütretjkljkljkljkljkljkljkljet</p>
 		</body>
 	</html>
