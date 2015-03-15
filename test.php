@@ -3,6 +3,7 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>Veebivalimised</title>
+			<link rel="stylesheet" href="css/bootstrap.min.css">
 			<link rel="stylesheet" type="text/css" href="theme.css">
 		</head>
 		<body>
