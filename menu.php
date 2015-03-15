@@ -1,7 +1,7 @@
 <nav>				
 	<img src="img/arrow.png" alt="arrow">		
 	<br>
-	<a href="test.php"> Logi sisse </a><br>
+	<a href="login.php"> Logi sisse </a><br>
 	<a href="index.php"> Kandidaadi lisamine </a><br>
 	<a href="#"> Hääleta </a><br>
 	<a href="#"> Tühista hääl </a><br>
