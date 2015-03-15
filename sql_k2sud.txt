@@ -1,0 +1,12 @@
+SQL käsud, abaasi:
+CREATE DATABASE vv_db
+DEFAULT CHARACTER SET utf8
+COLLATE utf8_general_ci;
+
+Tabeli a-baasis:
+CREATE TABLE IF NOT EXISTS users (
+  userID int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(50) NOT NULL,
+  password varbinary(250) NOT NULL,
+  PRIMARY KEY (userID,username)
+)
