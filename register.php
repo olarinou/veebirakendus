@@ -14,7 +14,7 @@ include_once("config.php"); //include the config
 		<title>Veebivalimised</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="theme.css">
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		
 	</head>
 	
 	<body>
@@ -34,8 +34,7 @@ include_once("config.php"); //include the config
       </div>
     </div>	
 		<header id="head" >
-		 <p>WWalimised tutorials User Registration</p>
-		 <p><a href="register.php"><span id="register">Register</span></a></p>
+		 <p>Kasutajaks registreerimine</p>
 		</header>
 		
 		<div id="main-wrapper">
@@ -43,17 +42,17 @@ include_once("config.php"); //include the config
 			 <form method="post">
 				 <ul>
 					 <li>
-						 <label for="usn">Username : </label>
+						 <label for="usn">Kasutajanimi: </label>
 						 <input type="text" id="usn" maxlength="30" required autofocus name="username" />
 					 </li>
 					
 					 <li>
-						 <label for="passwd">Password : </label>
+						 <label for="passwd">Parool: </label>
 						 <input type="password" id="passwd" maxlength="30" required name="password" />
 					 </li>
 						
 						<li>
-						 <label for="conpasswd">Confirm Password : </label>
+						 <label for="conpasswd">Parool uuesti: </label>
 						 <input type="password" id="conpasswd" maxlength="30" required name="conpassword" />
 					 </li>
 					 <li class="buttons">

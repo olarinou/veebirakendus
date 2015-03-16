@@ -11,7 +11,7 @@ include_once("config.php"); ?>
 		<title>Veebivalimised</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="theme.css">
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		
 	</head>
 	
 	<body>
@@ -32,7 +32,7 @@ include_once("config.php"); ?>
     </div>	
 		<header id="head" >
 		 <p>Veebivalimised login</p>
-		 <p><a href="register.php"><span id="register">Register</span></a></p>
+		 <p><a href="register.php"><span id="register">Kasutajaks refistreerimine</span></a></p>
 		</header>
 		
 		<div id="main-wrapper">
@@ -40,12 +40,12 @@ include_once("config.php"); ?>
 			 <form method="post" action="">
 				 <ul>
 					 <li>
-						 <label for="usn">Username : </label>
+						 <label for="usn">Kasutajanimi: </label>
 						 <input type="text" maxlength="30" required autofocus name="username" />
 					 </li>
 					
 					 <li>
-						 <label for="passwd">Password : </label>
+						 <label for="passwd">Parool: </label>
 						 <input type="password" maxlength="30" required name="password" />
 					 </li>
 					 <li class="buttons">

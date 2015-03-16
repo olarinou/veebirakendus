@@ -60,10 +60,6 @@ h1 {
     color: #00ff00;
 }
 
-p {
-	color: red;
-}
-
 .nav li {
   display: inline;
 }
@@ -74,3 +70,10 @@ p {
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
+}
+
+.footer {
+	background-color: orange;
+	padding: 14px 10px;
+	text-align: center;
+}
