@@ -10,3 +10,25 @@ CREATE TABLE IF NOT EXISTS users (
   password varbinary(250) NOT NULL,
   PRIMARY KEY (userID,username)
 )
+--------------------
+//Loo tabel kandidaadid
+CREATE TABLE IF NOT EXISTS kandidaadid ( kandidaadiID int(11) NOT NULL AUTO_INCREMENT, nimi varchar(50) NOT NULL, erakond varchar(50) NOT NULL, piirkond varchar(50) NOT NULL, PRIMARY KEY (kandidaadiID,nimi) )
+
+//Lisa paar tegelast
+INSERT INTO kandidaadid (nimi,erakond,piirkond)
+VALUES ('Juku Kuku','Päike','Harjumaa');
+
+INSERT INTO kandidaadid (nimi,erakond,piirkond)
+VALUES ('Tõnu Tõukemõnu','Kuu','Põlvamaa');
+
+INSERT INTO kandidaadid (nimi,erakond,piirkond)
+VALUES ('Aita Leida','Täheke','Harjumaa');
+
+INSERT INTO kandidaadid (nimi,erakond,piirkond)
+VALUES ('Heli Kopter','Päike','Tartumaa');
+
+INSERT INTO kandidaadid (nimi,erakond,piirkond)
+VALUES ('Juss Suss','Äikene','Tartumaa');
+
+//See ei aidanud:
+ALTER TABLE kandidaadid DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci

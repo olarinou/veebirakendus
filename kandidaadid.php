@@ -14,8 +14,7 @@
     </div>			
 	<div class="body">
 		<div class="container">	
-			<h2>Veebivalimised</h2>
-			<p>2015 aasta valimised on möödas. Õnnitleme kõiki väljavalituid. Järgmine kord uuesti. Teie veebivalimised!</p>	
+			<?php include('kandidaadid_db.php'); ?>
 		</div>
 	</div>
 

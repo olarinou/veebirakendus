@@ -1,13 +1,14 @@
-<nav>				
-	<img src="img/arrow.png" alt="arrow">		
-	<br>
-	<a href="login.php"> Logi sisse </a><br>
-	<a href="index.php"> Kandidaadi lisamine </a><br>
-	<a href="#"> Hääleta </a><br>
-	<a href="#"> Tühista hääl </a><br>
-	<a href="#"> Kandidaadid </a><br>
-	<a href="#"> Otsing </a><br>
-	<a href="#"> Tulemuste jälgimine </a><br>
-	<a href="#"> Statistika </a>				
+<nav>						
+	<ul class="text-center">
+        	<li><a href="index.php">Avaleht</a></li>
+          	<li><a href="login.php">Logi sisse</a></li>
+          	<li><a href="index.php">Kandidaadi lisamine</a></li>
+          	<li><a href="#">Hääleta</a></li>
+          	<li><a href="#">Tühista hääl</a></li>
+          	<li><a href="kandidaadid.php">Kandidaadid</a></li>
+          	<li><a href="#">Otsing</a></li>
+          	<li><a href="#">Tulemuste jälgimine</a></li>
+          	<li><a href="#">Statistika</a></li>
+    </ul>				
 </nav>
 
