@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = NEW MySQLi('veebivalimised','root','root','vv_db');
+$mysqli = NEW MySQLi('veebivalimised','root','Admin123','vv_db');
 
 $resultSet = $mysqli->query("SELECT * FROM kandidaadid");
 if($resultSet->num_rows != 0){
