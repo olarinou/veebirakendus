@@ -32,3 +32,15 @@ VALUES ('Juss Suss','Äikene','Tartumaa');
 
 //See ei aidanud:
 ALTER TABLE kandidaadid DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci
+
+
+------------------------
+22/03/15 jee uuendus - users, migrations (vist optional), sessions 
+
+CREATE TABLE IF NOT EXISTS users ( userID int(11) NOT NULL AUTO_INCREMENT, username varchar(50) NOT NULL, password varchar(64) NOT NULL, updated_at DATETIME on update CURRENT_TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP, created_at DATETIME NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (userID,username) );
+
+
+CREATE TABLE IF NOT EXISTS sessions ( id varchar(64) NOT NULL, payload text NOT NULL, last_activity int(11) NOT NULL, UNIQUE KEY (id) );
+
+
+CREATE TABLE IF NOT EXISTS migrations ( migration varchar(255) NOT NULL, batch int(11) NOT NULL);
