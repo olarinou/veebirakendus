@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = NEW MySQLi('http://veebivalimised.cloudapp.net/','root','root','vv_db');
+$mysqli = NEW MySQLi('veebivalimised','root','root','vv_db');
 
 $resultSet = $mysqli->query("SELECT * FROM kandidaadid");
 if($resultSet->num_rows != 0){
