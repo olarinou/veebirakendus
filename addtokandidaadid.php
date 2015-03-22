@@ -1,7 +1,7 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("veebivalimised", "root", "root", "vv_db");
+$link = mysqli_connect("veebivalimised", "root", "Admin123", "vv_db");
  
 // Check connection
 if($link === false){
