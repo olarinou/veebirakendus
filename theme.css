@@ -77,3 +77,7 @@ h1 {
 	padding: 14px 10px;
 	text-align: center;
 }
+
+.body button {
+	margin-bottom: 10px;
+}

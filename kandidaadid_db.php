@@ -10,7 +10,7 @@ if($resultSet->num_rows != 0){
 	$erakond = $rows['erakond'];
 	$piirkond = $rows['piirkond'];
 
-	echo "<p>Nimi: $kandidaat<br>Erakond: $erakond<br>Piirkond $piirkond</p>";
+	echo "<p>Nimi: $kandidaat<br>Erakond: $erakond<br>Piirkond: $piirkond</p>";
 
 }
 }else{
