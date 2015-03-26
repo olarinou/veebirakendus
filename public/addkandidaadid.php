@@ -27,7 +27,7 @@
 			        <label for="piirkond">Piirkond:</label>
 			        <input type="text" class="form-control" name="piirkond" id="piirkond" placeholder="Piirkond" required>
 			    </div>
-			    <button type="submit" class="btn btn-default">Submit</button>
+			    <button type="submit" class="btn btn-default">Lisa</button>
 			</form>	
 		</div>
 	</div>

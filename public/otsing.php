@@ -14,11 +14,11 @@
     </div>			
 	<div class="body">
 		<div class="container">	
-    	<form action="search.php" method="GET">
+    	<form action="search.php" method="post">
 				<div class="form-group">
-			        <label for="nimi">Nimi:</label>
-			        <input type="text" class="form-control" name="query" placeholder="Nimi" required>
-			    </div>
+			        <label for="nimi">Sisestage kandidaadi nimi:</label>
+			        <input type="text" class="form-control" name="nimi" placeholder="Nimi" required>
+			    </div> 
 			<button type="submit" class="btn btn-default">Otsi</button>
 		</form>		
 		</div>

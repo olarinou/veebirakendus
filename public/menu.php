@@ -6,7 +6,7 @@
             <li><a href="addkandidaadid.php">Kandidaadi lisamine</a></li>
           	<li><a href="#">Hääleta</a></li>
           	<li><a href="#">Tühista hääl</a></li>
-          	<li><a href="#">Otsing</a></li>
+          	<li><a href="otsing.php">Otsing</a></li>
           	<li><a href="#">Tulemuste jälgimine</a></li>
           	<li><a href="#">Statistika</a></li>
     </ul>				
