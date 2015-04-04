@@ -16,7 +16,7 @@ $piirkond = mysqli_real_escape_string($link, $_POST['piirkond']);
 // attempt insert query execution
 $sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
 if(mysqli_query($link, $sql)){
-    include ("kandidaatkinnitatud.php");
+    include ("addkandidaadid.php");
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
