@@ -4,7 +4,9 @@
 			<meta charset="UTF-8">
 			<title>Veebivalimised</title>
 			<link rel="stylesheet" href="css/bootstrap.min.css">
-			<link rel="stylesheet" type="text/css" href="theme.css">				
+			<link rel="stylesheet" type="text/css" href="theme.css">
+			<!-- Include JS File Here -->
+			<script src="js/addkandidaadid.js"></script>			
 		</head>				
 		<body>
 		<div class="nav">
@@ -13,8 +15,9 @@
       </div>
     </div>			
 	<div class="body">
+	
 		<div class="container">	
-			<form action="addtokandidaadid.php" method="post">
+			<form id="kandidaadid" onSubmit="return formValidation(this.form) " action="addtokandidaadid.php" method="post">
 				<div class="form-group">
 			        <label for="nimi">Nimi:</label>
 			        <input type="text" class="form-control" name="nimi" id="nimi" placeholder="Nimi" required>
