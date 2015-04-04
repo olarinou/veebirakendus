@@ -67,7 +67,7 @@ class AuthController extends Controller {
 		//User::up($username,$password);	
 		$this->user->save();
         $this->auth->login($this->user); 
-        return redirect()->back();
+        return redirect()->intended('/user');
     }
  
     /**
@@ -92,7 +92,7 @@ class AuthController extends Controller {
 		$password = $request->input('password');		
         if (Auth::attempt(['username' => $username, 'password' => $password]))
         {
-            return redirect()->back();
+            return redirect()->intended('/user');
         }
  
         return redirect('/login')->withErrors([
@@ -124,7 +124,7 @@ class AuthController extends Controller {
 		
 		if (Auth::attempt(['username' => $username, 'password' => "parool"]))
         {
-            return redirect()->back();
+            return redirect()->intended('/user');
         }
 		else
 		{	
@@ -133,7 +133,7 @@ class AuthController extends Controller {
 			$this->user->password = $password;			
 			$this->user->save();
 			$this->auth->login($this->user); 
-			return redirect()->back();
+			return redirect()->intended('/user');
 		}		
     }
 	
