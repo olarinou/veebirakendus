@@ -6,7 +6,7 @@
 @section('main')
     <div class="col-md-8 col-md-offset-2 form-content">
         <h3 class="heading">Kandidaadi lisamine</h3>        
-        {!!Form::open(['url'=>'/addkandidaadid','onsubmit'=>'formValidation();return;','class'=>'form form-horizontal','style'=>'margin-top:50px'])!!}
+        {!!Form::open(['url'=>'/addkandidaadid','onsubmit'=>'formValidation(this)','class'=>'form form-horizontal','style'=>'margin-top:50px'])!!}
         <div class="form-group">
             {!! Form::label('nimi','Nimi:',['class'=>'col-sm-3 control-label']) !!}
             <div class="col-sm-8">
