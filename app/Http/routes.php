@@ -12,7 +12,15 @@
 */
 
 Route::get('/',['as'=>'home','uses'=>'HomeController@index']);
-Route::get('/dash-board',['as'=>'dash-board','uses'=>"DashBoardController@index"]);
+Route::get('/user',['as'=>'user','uses'=>'HomeController@user']);
+Route::get('/kandidaadid',['as'=>'kandidaadid','uses'=>'HomeController@kandidaadid']);
+Route::get('/addkandidaadid',['as'=>'addkandidaadid','uses'=>'HomeController@addkandidaadid']);
+Route::post('/addkandidaadid',['as'=>'addkandidaadid','uses'=>'HomeController@postaddkandidaadid']);
+Route::get('/otsing',['as'=>'otsing','uses'=>'HomeController@otsing']);
+Route::post('/otsing',['as'=>'otsing','uses'=>'HomeController@postotsing']);
+Route::get('/notloggedin',['as'=>'notloggedin','uses'=>"HomeController@notloggedin"]);
+Route::get('/facebookauth',['as'=>'facebookauth','uses'=>"Auth\AuthController@facebookauth"]);
+Route::get('/facebooklogin',['as'=>'facebooklogin','uses'=>"Auth\AuthController@facebooklogin"]);
+Route::get('/tulemus',['as'=>'tulemus','uses'=>"HomeController@tulemus"]);
  
 Route::controller('/','Auth\AuthController');
-

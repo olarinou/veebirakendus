@@ -1,9 +1,11 @@
 <?php namespace App\Http\Controllers\Auth;
 use Hash;
 use Auth; 
+use Socialize;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
+
  
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
@@ -21,6 +23,7 @@ class AuthController extends Controller {
      * @var Authenticator
      */
     protected $auth;
+
  
     /**
      * Create a new authentication controller instance.
@@ -64,7 +67,7 @@ class AuthController extends Controller {
 		//User::up($username,$password);	
 		$this->user->save();
         $this->auth->login($this->user); 
-        return redirect('/'); 
+        return redirect()->back();
     }
  
     /**
@@ -89,14 +92,14 @@ class AuthController extends Controller {
 		$password = $request->input('password');		
         if (Auth::attempt(['username' => $username, 'password' => $password]))
         {
-            return redirect('/');
+            return redirect()->back();
         }
  
         return redirect('/login')->withErrors([
             'username' => 'Sisestatud kasutajanimi või parool on vale.',
         ]);
     }
- 
+
     /**
      * Log the user out of the application.
      *
@@ -106,7 +109,32 @@ class AuthController extends Controller {
     {
         $this->auth->logout();
  
-        return redirect('/');
+        return redirect('/user');
     }
- 
+	
+	public function facebookauth()
+    {
+        return Socialize::with('facebook')->redirect();
+    }
+	
+	public function facebooklogin()
+    {
+        $user2 = Socialize::with('facebook')->user();
+		$username = $user2->getEmail();
+		
+		if (Auth::attempt(['username' => $username, 'password' => "parool"]))
+        {
+            return redirect()->back();
+        }
+		else
+		{	
+			$password = Hash::make("parool");
+			$this->user->username = $username;
+			$this->user->password = $password;			
+			$this->user->save();
+			$this->auth->login($this->user); 
+			return redirect()->back();
+		}		
+    }
+	
 }

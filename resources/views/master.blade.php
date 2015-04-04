@@ -1,15 +1,30 @@
 <!doctype html>
-<head>
+<head>	
     <meta charset="utf-8">
+	<title>Veebivalimised</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">   
-    {!!HTML::style('assets/css/bootstrap.css')!!}
-    {!!HTML::style('assets/css/style.css')!!}
+	<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">	
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('theme.css') }}">
 </head>
 <body>
-    <div class="container">
-     
-        @yield('main')
-     
+	<div class="nav">
+	<div class="container">	
+	@if (Auth::check())
+		@include('menuloggedin')
+	@else    
+        @include('menuloggedout')
+	@endif	
     </div>
+	</div>
+	<div class="body">
+    <div class="container">
+		@yield('main')
+    </div>
+	</div>
+	<div class="footer">
+		<div class="container">
+  		<p>Veebivalimised on loodud aine Veebirakenduste loomine korras</p>
+		</div>
+	</div>
 </body>
 </html>	

@@ -14,6 +14,12 @@ return [
 	|
 	*/
 
+	'facebook' => [
+		'client_id' => '1553902131537295',
+		'client_secret' => '678cea177c4967c3de89725bac2ee54f',
+		'redirect' => 'http://veebivalimised.cloudapp.net/facebooklogin',
+	],
+	
 	'mailgun' => [
 		'domain' => '',
 		'secret' => '',

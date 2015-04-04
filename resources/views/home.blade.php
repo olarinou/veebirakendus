@@ -1,17 +1,13 @@
-@extends('app')
-
-@section('content')
+@extends('master') 
+@section('main')
+ 
 <div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
-
-				<div class="panel-body">
-					You are logged in!
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+         <div class="col-md-12">
+            <h2>Veebivalimised</h2>
+			<p>2015 aasta valimised on möödas. Õnnitleme kõiki väljavalituid. Järgmine kord uuesti. Teie veebivalimised!</p>	
+         </div>
+    </div>
 </div>
-@endsection
+
+@stop

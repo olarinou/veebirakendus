@@ -14,7 +14,7 @@
     </div>			
 	<div class="body">
 		<div class="container">	
-			<?php include('tulemusjoin.php'); ?>
+			<p>Kandidaat edukalt lisatud!</p>
 		</div>
 	</div>
 

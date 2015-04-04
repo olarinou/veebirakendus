@@ -2,8 +2,9 @@ body {
 	background-color:  #FFFFFF;
 	padding:20px;
 	margin:20px;
-	display:inline-block;	
+	display:inline-block;		
 }
+
 /*
 nav:hover {		
     width: 120px;			
@@ -73,6 +74,8 @@ h1 {
 }
 
 .footer {
+	position:absolute;
+	bottom:0;
 	background-color: orange;
 	padding: 14px 10px;
 	text-align: center;

@@ -1,5 +1,9 @@
 <?php namespace App\Http\Controllers;
 use Auth;
+use Socialize;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\AddRequest;
+
 class HomeController extends Controller {
 
     /**
@@ -10,16 +14,96 @@ class HomeController extends Controller {
 
 public function index()
 	{
+		return view('home');
+	} 
+	
+public function kandidaadid()
+	{
+		return view('kandidaadid');
+	}
+
+public function tulemus()
+	{
+		return view('tulemus');
+	} 	
+	
+public function user()
+	{
 		if(Auth::check())
 		{
 			$username = Auth::user()->username;
-			return view('homepage')->with('username', $username);								
+			return view('loggedin')->with('username', $username);								
+		}		
+		else
+		{
+			return view('notloggedin');
+		}
+	} 	
+
+public function notloggedin()
+    {
+        return view('notloggedin');
+    }
+	
+public function otsing()
+    {
+        return view('otsing');
+    }
+
+public function postotsing()
+    {	
+	return view('search');
+}	
+
+public function addkandidaadid()
+	{
+		if(Auth::check())
+		{
+			return view('addkandidaadid');								
 		}
 		else
 		{
-			return view('dashboard');
+			return redirect()->route('notloggedin');
 		}
 	} 
+
+public function postaddkandidaadid(AddRequest $request)
+	{	
+		$request->nimi;
+		$request->erakond;
+		$request->piirkond;
+		if(Auth::check())
+		{
+			$link = mysqli_connect("localhost", "root", "Admin123", "vv_db");
+ 
+			// Check connection
+			if($link === false){
+				die("ERROR: Could not connect. " . mysqli_connect_error());
+			}	
+ 
+			// Escape user inputs for security
+			$nimi = mysqli_real_escape_string($link, $_POST['nimi']);
+			$erakond = mysqli_real_escape_string($link, $_POST['erakond']);
+			$piirkond = mysqli_real_escape_string($link, $_POST['piirkond']);
+ 
+			// attempt insert query execution
+			$sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
+			if(mysqli_query($link, $sql)){
+				return view("kandidaatkinnitatud");
+			} else{
+				echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+			}
+ 
+			// close connection
+			mysqli_close($link);										
+		}
+		else
+		{
+			return redirect()->route('notloggedin');
+		}
+	}
+ 
+
 /*public function index()
 {
     return view('homepage');
