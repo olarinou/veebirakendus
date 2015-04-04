@@ -1,33 +1,21 @@
-@section('script')
-{{ HTML::script('js/addkandidaadid.js')}}
-@stop
-
-@extends('master') 
+@extends('master')
+<script src="js/addkandidaadid.js"></script>	 
 @section('main')
-    <div class="col-md-8 col-md-offset-2 form-content">
-        <h3 class="heading">Kandidaadi lisamine</h3>        
-        {!!Form::open(['id'=>'kandidaadid','onsubmit'=>'return formValidation(this.form)','url'=>'/addkandidaadid','class'=>'form form-horizontal','style'=>'margin-top:50px'])!!}
-        <div class="form-group">
-            {!! Form::label('nimi','Nimi:',['class'=>'col-sm-3 control-label']) !!}
-            <div class="col-sm-8">
-                {!! Form::text('nimi',Input::old('nimi'),['class'=>'form-control']) !!}
-            </div>
-        </div>
-        <div class="form-group">
-            {!! Form::label('erakond','Erakond:',['class'=>'col-sm-3 control-label']) !!}
-            <div class="col-sm-8">
-                {!! Form::text('erakond',Input::old('erakond'),['class'=>'form-control']) !!}
-            </div>
-        </div>
-		<div class="form-group">
-            {!! Form::label('piirkond','Piirkond:',['class'=>'col-sm-3 control-label']) !!}
-            <div class="col-sm-8">
-                {!! Form::text('piirkond',Input::old('piirkond'),['class'=>'form-control']) !!}
-            </div>
-        </div>
-        <div class="text-center">
-            {!!Form::submit('Lisa',['class'=>'btn btn-default'])!!}
-        </div>
-        {!!Form::close()!!}
-    </div> 
+    <div class="container">	
+			<form id="kandidaadid" onSubmit="return formValidation(this.form) " action="addkandidaadid" method="post">
+				<div class="form-group">
+			        <label for="nimi">Nimi:</label>
+			        <input type="text" class="form-control" name="nimi" id="nimi" placeholder="Nimi" required>
+			    </div>
+			    <div class="form-group">
+			        <label for="erakond">Erakond:</label>
+			        <input type="text" class="form-control" name="erakond" id="erakond" placeholder="Erakond" required>
+			    </div>
+			    <div class="form-group">
+			        <label for="piirkond">Piirkond:</label>
+			        <input type="text" class="form-control" name="piirkond" id="piirkond" placeholder="Piirkond" required>
+			    </div>
+			    <button type="submit" class="btn btn-default">Lisa</button>
+			</form>	
+	</div> 
 @stop
