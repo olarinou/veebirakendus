@@ -4,17 +4,11 @@
     </IfModule>
 
     RewriteEngine On
-<<<<<<< HEAD
-
-    # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ public/$1 [L,R=301]
-
-=======
-
->>>>>>> d9acfe1f50fe6ac237512136aac8a7e11f43a076
+    
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
+
 
