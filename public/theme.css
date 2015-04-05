@@ -1,8 +1,11 @@
 body {
+	overflow:hidden;
+	padding:10px;
+	height:100%;
+	margin:10px;
 	background-color:  #FFFFFF;
-	padding:20px;
-	margin:20px;
-	display:inline-block;		
+	display:flex;
+	flex-direction:column;
 }
 
 /*
@@ -57,8 +60,28 @@ nav a{
 	padding:0px;	
 }
 */
+
+.container>.container {
+	align:center;
+        overflow-y: auto;
+	padding:10px;
+	bottom:50px;
+	top:40px;
+	flex:2;
+	height:auto;
+	position:absolute;
+	margin:10px;
+}
+
 h1 {
     color: #00ff00;
+}
+
+.nav {
+ position:absolute;
+ top:10px;
+  height: 30px;
+flex:1;	
 }
 
 .nav li {
@@ -78,5 +101,7 @@ h1 {
 	bottom:0;
 	background-color: orange;
 	padding: 14px 10px;
+	margin: 10px 10px 0px 10px; 
 	text-align: center;
+	flex:3;
 }
