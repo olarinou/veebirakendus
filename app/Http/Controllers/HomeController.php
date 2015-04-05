@@ -82,9 +82,9 @@ public function postaddkandidaadid(AddRequest $request)
 			}	
  
 			// Escape user inputs for security
-			$nimi = mysqli_real_escape_string($link, $_POST['nimi']);
-			$erakond = mysqli_real_escape_string($link, $_POST['erakond']);
-			$piirkond = mysqli_real_escape_string($link, $_POST['piirkond']);
+			$nimi = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['nimi'])));
+			$erakond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['erakond'])));
+			$piirkond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['piirkond'])));
  
 			// attempt insert query execution
 			$sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
