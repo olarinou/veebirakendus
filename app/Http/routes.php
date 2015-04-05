@@ -18,7 +18,6 @@ Route::get('/addkandidaadid',['as'=>'addkandidaadid','uses'=>'HomeController@add
 Route::post('/addkandidaadid',['as'=>'addkandidaadid','uses'=>'HomeController@postaddkandidaadid']);
 Route::get('/otsing',['as'=>'otsing','uses'=>'HomeController@otsing']);
 Route::post('/otsing',['as'=>'otsing','uses'=>'HomeController@postotsing']);
-Route::get('/notloggedin',['as'=>'notloggedin','uses'=>"HomeController@notloggedin"]);
 Route::get('/facebookauth',['as'=>'facebookauth','uses'=>"Auth\AuthController@facebookauth"]);
 Route::get('/facebooklogin',['as'=>'facebooklogin','uses'=>"Auth\AuthController@facebooklogin"]);
 Route::get('/tulemus',['as'=>'tulemus','uses'=>"HomeController@tulemus"]);

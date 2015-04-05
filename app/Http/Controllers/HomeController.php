@@ -40,11 +40,6 @@ public function user()
 		}
 	} 	
 
-public function notloggedin()
-    {
-        return view('notloggedin');
-    }
-	
 public function otsing()
     {
         return view('otsing');
@@ -63,7 +58,7 @@ public function addkandidaadid()
 		}
 		else
 		{
-			return redirect()->route('notloggedin');
+			return redirect()->route('user');
 		}
 	} 
 
@@ -99,7 +94,7 @@ public function postaddkandidaadid(AddRequest $request)
 		}
 		else
 		{
-			return redirect()->route('notloggedin');
+			return redirect()->route('user');
 		}
 	}
  
