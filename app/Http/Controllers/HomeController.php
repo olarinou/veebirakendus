@@ -39,10 +39,10 @@ public function usergetajax()
 
 		echo "<table>
 		<tr>
-		<th>kandidaadiID</th>
-		<th>nimi</th>
-		<th>erakond</th>
-		<th>piirkond</th>
+		<th>KandidaadiID </th>
+		<th> Nimi </th>
+		<th> Erakond </th>
+		<th> Piirkond </th>
 		</tr>";
 		while($row = mysqli_fetch_array($result)) {
 			echo "<tr>";
