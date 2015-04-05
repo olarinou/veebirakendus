@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<head>	
-    <meta charset="utf-8">
-	<title>Veebivalimised</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
-	<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">	
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('theme.css') }}">
-</head>
-	<body>
-	<div class="body">
-		<div class="container">	
-			<?php include('laravelphp.php');?>
-		</div>
-	</div>
-	</body>
-</html>
+<?php
+				require __DIR__.'/../bootstrap/autoload.php';
+				$app = require_once __DIR__.'/../bootstrap/app.php';
+				$kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+
+				$response = $kernel->handle(
+					$request = Illuminate\Http\Request::capture()
+				);
+				$response->send();
+				$kernel->terminate($request, $response);				
+			?>
