@@ -64,6 +64,7 @@ nav a{
 .container>.container {
 	align:center;
         overflow-y: auto;
+	overflow-x:hidden;
 	padding:10px;
 	bottom:50px;
 	top:40px;
@@ -71,6 +72,10 @@ nav a{
 	height:auto;
 	position:absolute;
 	margin:10px;
+}
+
+.container>.container p{
+        word-wrap: normal;
 }
 
 h1 {
