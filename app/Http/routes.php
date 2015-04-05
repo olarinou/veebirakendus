@@ -21,5 +21,7 @@ Route::post('/otsing',['as'=>'otsing','uses'=>'HomeController@postotsing']);
 Route::get('/facebookauth',['as'=>'facebookauth','uses'=>"Auth\AuthController@facebookauth"]);
 Route::get('/facebooklogin',['as'=>'facebooklogin','uses'=>"Auth\AuthController@facebooklogin"]);
 Route::get('/tulemus',['as'=>'tulemus','uses'=>"HomeController@tulemus"]);
+Route::get('/getuser',['as'=>'usergetajax','uses'=>"HomeController@usergetajax"]);
+Route::get('/tere',['as'=>'tere','uses'=>"HomeController@tere"]);
  
 Route::controller('/','Auth\AuthController');
