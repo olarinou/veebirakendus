@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers\Auth;
 use Hash;
 use Auth; 
+use Session;
 use Socialize;
 use App\User;
 use App\Http\Controllers\Controller;
@@ -67,7 +68,8 @@ class AuthController extends Controller {
 		//User::up($username,$password);	
 		$this->user->save();
         $this->auth->login($this->user); 
-        return redirect()->intended('/user');
+			
+        return redirect('/login');
     }
  
     /**
@@ -92,7 +94,10 @@ class AuthController extends Controller {
 		$password = $request->input('password');		
         if (Auth::attempt(['username' => $username, 'password' => $password]))
         {
-            return redirect()->intended('/user');
+			$intendedUrl = Session::get('url.intended');
+			Session::forget('url.intended');
+			return redirect($intendedUrl);
+            //return redirect()->intended('/user');
         }
  
         return redirect('/login')->withErrors([
@@ -108,8 +113,10 @@ class AuthController extends Controller {
     public function getLogout()
     {
         $this->auth->logout();
- 
-        return redirect('/user');
+		
+        $intendedUrl = Session::get('url.intended');
+		Session::forget('url.intended');
+		return redirect($intendedUrl);
     }
 	
 	public function facebookauth()
@@ -124,7 +131,10 @@ class AuthController extends Controller {
 		
 		if (Auth::attempt(['username' => $username, 'password' => "parool"]))
         {
-            return redirect()->intended('/user');
+			
+            $intendedUrl = Session::get('url.intended');
+			Session::forget('url.intended');
+			return redirect($intendedUrl);
         }
 		else
 		{	
@@ -133,7 +143,10 @@ class AuthController extends Controller {
 			$this->user->password = $password;			
 			$this->user->save();
 			$this->auth->login($this->user); 
-			return redirect()->intended('/user');
+			
+			$intendedUrl = Session::get('url.intended');
+			Session::forget('url.intended');
+			return redirect($intendedUrl);
 		}		
     }
 	

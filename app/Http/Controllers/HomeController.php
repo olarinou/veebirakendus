@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 use Auth;
+use URL;
+use Session;
 use Socialize;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddRequest;
@@ -29,6 +31,8 @@ public function tulemus()
 	
 public function user()
 	{
+	$prevurl = URL::previous();	
+	Session::put('url.intended', $prevurl);	
 		if(Auth::check())
 		{
 			$username = Auth::user()->username;
@@ -37,7 +41,7 @@ public function user()
 		else
 		{
 			return view('notloggedin');
-		}
+		}		
 	} 	
 
 public function otsing()
