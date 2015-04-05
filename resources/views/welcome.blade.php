@@ -1,4 +1,4 @@
-<html>
+<!--<html>
 	<head>
 		<title>Laravel</title>
 		
@@ -46,3 +46,4 @@
 		</div>
 	</body>
 </html>
+-->
