@@ -44,3 +44,15 @@ CREATE TABLE IF NOT EXISTS sessions ( id varchar(64) NOT NULL, payload text NOT 
 
 
 CREATE TABLE IF NOT EXISTS migrations ( migration varchar(255) NOT NULL, batch int(11) NOT NULL);
+-----------------------------
+CREATE TABLE IF NOT EXISTS `tulemused` (
+  `tulemusID` int(11) NOT NULL AUTO_INCREMENT,
+  `kandidaadiID` int(11) NOT NULL,
+  `tulemus` int(11) DEFAULT NULL,
+  PRIMARY KEY (`tulemusID`)
+)
+
+INSERT INTO `tulemused` (`tulemusID`, `kandidaadiID`, `tulemus`) VALUES
+(1, 1, 50),
+(2, 2, 70),
+(3, 3, 40);
