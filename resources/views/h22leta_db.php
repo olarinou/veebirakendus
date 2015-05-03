@@ -1,0 +1,31 @@
+
+<?php
+
+$mysqli = NEW MySQLi('localhost','root','Admin123','vv_db');
+
+
+
+$query = $mysqli->query("SELECT kandidaadiID, nimi, erakond, piirkond FROM kandidaadid ORDER BY kandidaadiID ASC");
+if($query->num_rows != 0){
+	echo '<form name="vote" id="vote" method="post" action="vote.php">';
+	
+	while($rows = $query->fetch_assoc()){ 
+		$kandid= $rows['kandidaadiID'] ;
+		$nimi=$rows['nimi'];
+		$erakond=$rows['erakond'];
+		$piirkond=$rows['piirkond']; 
+		
+		echo '<input type="radio" name="valitu" value="isik"> ID: ' .$kandid. ' <strong> Nimi: ' .$nimi. '</strong> 
+		Erakond: ' .$erakond. ' Piirkond: ' .$piirkond; 
+		echo ' <br><br>';
+		}
+	include "vote.php"; 
+	echo '<br><p><input type="submit" name="voteSubmit" value="Vali kandidaat" /></p></form>';
+	} 
+else { 
+echo "Pole ühtegi kandidaati";
+}
+
+$mysqli->close();
+
+?>
