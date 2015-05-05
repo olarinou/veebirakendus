@@ -86,6 +86,11 @@ public function otsing()
         return view('otsing');
     }
 
+public function haaletus()
+    {
+        return view('haaletus');
+    }	
+	
 public function postotsing()
     {	
 	return view('search');
