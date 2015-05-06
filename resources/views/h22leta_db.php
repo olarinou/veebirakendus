@@ -15,7 +15,7 @@ if($query->num_rows != 0){
 		$erakond=$rows['erakond'];
 		$piirkond=$rows['piirkond']; 
 		
-		echo '<input type="radio" name="valitu" value="isik"> ID: ' .$kandid. ' <strong> Nimi: ' .$nimi. '</strong> 
+		echo '<input type="radio" name="valitu" value="' . $kandid . '"> ID: ' .$kandid. ' <strong> Nimi: ' .$nimi. '</strong> 
 		Erakond: ' .$erakond. ' Piirkond: ' .$piirkond; 
 		echo ' <br><br>';
 		}

@@ -11,7 +11,9 @@ if (isset($_POST['voteSubmit'])) {
 
 	
 	if (!empty($_POST['valitu'])) {
-		$kandid = mysqli_real_escape_string($link, $_POST['kandidaadiID']);
+		$kandid = mysqli_real_escape_string($link, $_POST['valitu']);
+		//var_dump($kandid);
+		//die();
 		$sql = "INSERT INTO tulemused (kandidaadiID, tulemus) VALUES ('$kandid', '1')";
 		
 		if(mysqli_query($link, $sql)){

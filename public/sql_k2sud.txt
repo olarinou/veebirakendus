@@ -56,3 +56,6 @@ INSERT INTO `tulemused` (`tulemusID`, `kandidaadiID`, `tulemus`) VALUES
 (1, 1, 50),
 (2, 2, 70),
 (3, 3, 40);
+
+ALTER TABLE tulemused ADD FOREIGN KEY (kandidaadiID) REFERENCES
+kandidaadid(kandidaadiID);
