@@ -1,16 +1,12 @@
-var bool = false;
+
 
 function dataRetrival() {	
 	if(typeof(EventSource) !== "undefined") {
 		var e = document.getElementById("valik");
-		querySetting = e.options[e.selectedIndex].value;
+		var querySetting = e.options[e.selectedIndex].value;
 		var source = new EventSource("/data/"+querySetting);		
 		source.onmessage = function(event) {
-			document.getElementById("result").innerText = event.data;						
-			if(bool)
-			{				
-				break;				
-			}			
+			document.getElementById("result").innerText = event.data;					
 		};
 	}
 	else {
