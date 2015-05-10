@@ -11,7 +11,7 @@
 	<br>
 	<p id="result"></p>	
 	<script type="text/javascript">
-		dataRetrival("Riik");
+		dataRetrival();
 	</script>
 	</div>
 @stop
