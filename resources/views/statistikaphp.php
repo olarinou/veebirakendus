@@ -29,6 +29,6 @@ $infoTable = Lava::DataTable();
 	
 	$chart = Lava::PieChart('infoChart');
 	$chart->datatable($infoTable);
-	echo $lava->render('PieChart', 'infoChart', 'infoTable', true);
+	echo Lava::render('PieChart', 'infoChart', 'infoTable', true);
 	
 ?>
