@@ -25,5 +25,7 @@ Route::get('/getuser',['as'=>'usergetajax','uses'=>"HomeController@usergetajax"]
 Route::get('/tere',['as'=>'tere','uses'=>"HomeController@tere"]);
 Route::match(['get', 'post'],'/haaletus',['as'=>'haaletus','uses'=>"HomeController@haaletus"]);
 Route::match(['get', 'post'],'/statistika',['as'=>'statistika','uses'=>"HomeController@displaychart"]);
+Route::get('/statistika', 'HomeController@statistika');
+Route::get('/data', 'HomeController@getStats');
  
 Route::controller('/','Auth\AuthController');

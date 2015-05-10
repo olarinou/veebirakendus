@@ -97,6 +97,29 @@ public function postotsing()
 	return view('search');
 }	
 
+public function getStats()
+    {
+	$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
+	$stats_arr = array();
+	$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
+	JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
+	
+	if($query->num_rows != 0){		
+	
+		while($rows = $query->fetch_assoc()){ 
+			$kandid= $rows['kandidaadiID'] ;
+			$nimi=$rows['nimi'];
+			$erakond=$rows['erakond'];
+			$piirkond=$rows['piirkond']; 
+			$tulemus=$rows['tulemus']; 
+			$stats_arr[$kandid] = array($piirkond, $nimi, $erakond, $tulemus);
+		}	
+	} 		
+	$mysqli->close();
+	//return $stats_arr;
+	echo $stats_arr;	
+}
+
 public function displaychart()
 	{
 	$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
@@ -142,6 +165,8 @@ public function displaychart()
 public function statistika()
 	{
 		return view('statistika');
+		//$stats = $this->getStats();
+		//return view('statistika', array('stats'=>$stats));
 	} 
 
 public function addkandidaadid()
