@@ -173,12 +173,14 @@ public function data()
 	{
 		header('Content-Type: text/event-stream');
 		header('Cache-Control: no-cache');
-
+		$time = date('r');
+		echo "Uuendatud: {$time}";
 		$stats = $this->getStats();
 		foreach($stats as $id=>$info)
 		{
 			echo $id, print_r($info);
 		}
+		
 		flush();
 	} 	
 	
