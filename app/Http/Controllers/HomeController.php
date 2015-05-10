@@ -169,31 +169,34 @@ public function statistika()
 		//return view('statistika', array('stats'=>$stats));
 	} 
 
-public function data()
-	{
+public function data($opt)
+	{		
 		header('Content-Type: text/event-stream');
 		header('Cache-Control: no-cache');		
-		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
-		$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
-		JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
+		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+		
+		if($opt == "Kandidaat"){
+			$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
+			JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
 	
-		if($query->num_rows != 0){		
+			if($query->num_rows != 0){		
 	
-		while($rows = $query->fetch_assoc()){ 
-			$kandid= $rows['kandidaadiID'] ;			
-			$nimi=$rows['nimi'];
-			$erakond=$rows['erakond'];
-			$piirkond=$rows['piirkond']; 
-			$tulemus=$rows['tulemus'];			
-				echo "data:	{$nimi}\n";				
-				echo "data:	{$erakond}\n";
-				echo "data:	{$piirkond}\n";
-				echo "data:	{$tulemus}\n";	
-				echo "data:	<br>";	
-			}	
+			while($rows = $query->fetch_assoc()){ 
+				$kandid= $rows['kandidaadiID'] ;			
+				$nimi=$rows['nimi'];
+				$erakond=$rows['erakond'];
+				$piirkond=$rows['piirkond']; 
+				$tulemus=$rows['tulemus'];			
+					echo "data:	{$nimi}\n";				
+					echo "data:	{$erakond}\n";
+					echo "data:	{$piirkond}\n";
+					echo "data:	{$tulemus}\n";				
+				}	
+			}
 		}
 		$time = date('r');
 		$mysqli->close();
+		
 		echo "data:	Uuendatud: {$time}\n";		
 		echo "data: \n\n"; 							
 		flush();
