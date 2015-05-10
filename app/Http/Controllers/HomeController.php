@@ -174,6 +174,7 @@ public function data()
 		header('Content-Type: text/event-stream');
 		header('Cache-Control: no-cache');		
 		//
+		$pushdat="";
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
 		$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
 		JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
@@ -186,7 +187,7 @@ public function data()
 			$erakond=$rows['erakond'];
 			$piirkond=$rows['piirkond']; 
 			$tulemus=$rows['tulemus']; 			
-			echo "data: <br><tr>
+			$pushdat+="<br><br><tr>
 				<td>{$nimi}</td>
 				<td>{$erakond}</td>
 				<td>{$piirkond}</td>
@@ -195,9 +196,9 @@ public function data()
 			}	
 		}
 		$time = date('r');
-		echo "data: Uuendatud: {$time}"; 		
 		$mysqli->close();
-		//					
+		$pushdat += "<br><br>Uuendatud: {$time}";
+		echo "data: {$pushdat}"; 							
 		flush();
 	} 	
 	
