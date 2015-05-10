@@ -9,9 +9,9 @@ function dataRetrival(valik) {
 			document.getElementById("result").innerText = event.data;
 			e = document.getElementById("valik");
 			newquery = e.options[e.selectedIndex].value;			
-			if(newquery!=querySetting)
-			{
-				continue;
+			if(newquery!==querySetting)
+			{				
+				continue;				
 			}				
 		};
 	}
