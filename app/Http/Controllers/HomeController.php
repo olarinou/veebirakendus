@@ -184,11 +184,12 @@ public function data()
 			$nimi=$rows['nimi'];
 			$erakond=$rows['erakond'];
 			$piirkond=$rows['piirkond']; 
-			$tulemus=$rows['tulemus']; 			
-				echo "data:	{$nimi}\n";
+			$tulemus=$rows['tulemus'];			
+				echo "data:	{$nimi}\n";				
 				echo "data:	{$erakond}\n";
 				echo "data:	{$piirkond}\n";
-				echo "data:	{$tulemus}\n";			
+				echo "data:	{$tulemus}\n";	
+				echo "data: \n\n"; 		
 			}	
 		}
 		$time = date('r');
