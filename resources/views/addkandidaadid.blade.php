@@ -9,15 +9,36 @@
 			    </div>
 			    <div class="form-group">
 			        <label for="erakond">Erakond:</label>
-			        <input type="text" class="form-control" name="erakond" id="erakond" placeholder="Erakond" required>
+			        <select class="form-control" name="erakond" id="erakond" required>
+			        	<option>Merkuur</option>
+    					<option>Veenus</option>
+    					<option>Maa</option>
+   						<option>Marss</option>
+   						<option>Jupiter</option>
+    					<option>Saturn</option>
+    					<option>Uraan</option>
+   						<option>Neptuun</option>
+   						<option>Pluuto</option>
+    				</select>
 			    </div>
 			    <div class="form-group">
 			        <label for="piirkond">Piirkond:</label>
 			        <select class="form-control" name="piirkond" id="piirkond" required>
-			        	<option>Harjumaa</option>
-    					<option>Tartumaa</option>
-    					<option>Ida-Virumaa</option>
-   						<option>Läänemaa</option>
+			        	<option>Harju maakond</option>
+    					<option>Lääne-Viru maakond</option>
+    					<option>Ida-Viru maakond</option>
+   						<option>Lääne maakond</option>
+   						<option>Rapla maakond</option>
+    					<option>Järva maakond</option>
+    					<option>Jõgeva maakond</option>
+   						<option>Pärnu maakond</option>
+   						<option>Viljandi maakond</option>
+    					<option>Tartu maakond</option>
+    					<option>Valga maakond</option>
+   						<option>Põlva maakond</option>
+   						<option>Võru maakond</option>
+    					<option>Saare maakond</option>
+    					<option>Hiiu maakond</option>
   					</select>
 			    </div>
 			    <button type="submit" class="btn btn-default">Lisa</button>
