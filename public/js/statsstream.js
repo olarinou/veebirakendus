@@ -1,5 +1,5 @@
 
-function dataRetrival(valik) {	
+function dataRetrival() {	
 	if(typeof(EventSource) !== "undefined") {
 		var e = document.getElementById("valik");
 		var querySetting = e.options[e.selectedIndex].value;
