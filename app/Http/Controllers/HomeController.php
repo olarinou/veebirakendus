@@ -98,8 +98,8 @@ public function postotsing()
 
 public function displaychart()
 	{
-	$mysqli = NEW MySQLi('localhost','root','Admin123','vv_db');
-	
+	$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+		
 	$lava = new Lavacharts();
 	$infoTable = $lava->DataTable();
 	$infoTable->addStringColumn('Piirkond')
