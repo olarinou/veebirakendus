@@ -7,19 +7,19 @@
     		<option value="Piirkond">Piirkondades</option>
     		<option value="Partei">Parteides</option>
    			<option value="Kandidaat">Kandidaatides</option>   						
-		</select>
-	<br>
-	<p id="result"></p>
-	<script>
-	if(typeof(EventSource) !== "undefined") {
-		var source = new EventSource("/data/"+querySetting);
+		<script>
+		if(typeof(EventSource) !== "undefined") {
+		var source = new EventSource("/data/"+value);
 		source.onmessage = function(event) {
 			document.getElementById("result").innerText = event.data;
 		};
-	}
-	else {
-		document.getElementById("result").innerText = "Sorry, your browser does not support server-sent events...";
-	}
+		}
+		else {
+			document.getElementById("result").innerText = "Sorry, your browser does not support server-sent events...";
+		}
 	</script>
+		</select>
+	<br>
+	<p id="result"></p>	
 	</div>
 @stop
