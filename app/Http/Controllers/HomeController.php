@@ -175,18 +175,30 @@ public function data()
 		header('Cache-Control: no-cache');
 		$time = date('r');
 		echo "Uuendatud: {$time}";
-		$stats = $this->getStats();
-		foreach($stats as $id=>$info)
-		{
+		//
+		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
+		$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
+		JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
+	
+		if($query->num_rows != 0){		
+	
+		while($rows = $query->fetch_assoc()){ 
+			$kandid= $rows['kandidaadiID'] ;			
+			$nimi=$rows['nimi'];
+			$erakond=$rows['erakond'];
+			$piirkond=$rows['piirkond']; 
+			$tulemus=$rows['tulemus']; 			
 			echo "<tr>
-				<td>{$id[0]}</td>
-				<td>{$id[1]}</td>
-				<td>{$id[2]}</td>
-				<td>{$id[3]}</td>
+				<td>{$nimi}</td>
+				<td>{$erakond}</td>
+				<td>{$piirkond}</td>
+				<td>{$tulemus}</td>
 			</tr>";
-        }
-		echo "Uuendatud: {$time}";		
-		flush();
+			}	
+		} 		
+		$mysqli->close();
+		//					
+		//flush();
 	} 	
 	
 public function addkandidaadid()
