@@ -176,10 +176,16 @@ public function data()
 		$time = date('r');
 		echo "Uuendatud: {$time}";
 		$stats = $this->getStats();
-		echo print_r($info);
-		
-		echo "Uuendatud: {$time} <br>";
-		echo  print_r($info); 
+		foreach($stats as $id=>$info)
+		{
+			echo "<tr>
+				<td>{$id[0]}</td>
+				<td>{$id[1]}</td>
+				<td>{$id[2]}</td>
+				<td>{$id[3]}</td>
+			</tr>"
+        }
+		echo "Uuendatud: {$time}";		
 		flush();
 	} 	
 	
