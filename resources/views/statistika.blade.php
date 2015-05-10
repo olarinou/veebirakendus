@@ -2,7 +2,7 @@
 <script src="js/statsstream.js"></script>
 @section('main')
 	<div class="container">
-		<select id="valik" onchange="dataRetrival.querySetting = value; dataRetrival(value);">
+		<select id="valik">
 			<option value="Riik">Riigis</option>
     		<option value="Piirkond">Piirkondades</option>
     		<option value="Partei">Parteides</option>
@@ -10,5 +10,8 @@
 		</select>
 	<br>
 	<p id="result"></p>	
+	<script type="text/javascript">
+		dataRetrival("Riik");
+	</script>
 	</div>
 @stop

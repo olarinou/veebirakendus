@@ -1,6 +1,7 @@
-var querySetting = "Riik";
 
 function dataRetrival(querySetting) {
+	var e = document.getElementById("valik");
+	var querySetting = e.options[e.selectedIndex].value;
 	if(typeof(EventSource) !== "undefined") {
 		var source = new EventSource("/data/"+querySetting);
 		source.onmessage = function(event) {
