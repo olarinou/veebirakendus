@@ -198,7 +198,7 @@ public function data()
 		$time = date('r');
 		$mysqli->close();
 		$pushdat = $pushdat."<br><br>Uuendatud: {$time}";
-		echo "data: {$pushdat}"; 							
+		echo "data: {$pushdat}\n\n"; 							
 		flush();
 	} 	
 	
