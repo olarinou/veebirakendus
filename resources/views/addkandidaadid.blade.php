@@ -13,7 +13,7 @@
 			        	<option>Merkuur</option>
     					<option>Veenus</option>
     					<option>Maa</option>
-   						<option>Marss</option>
+   						<option>Mars</option>
    						<option>Jupiter</option>
     					<option>Saturn</option>
     					<option>Uraan</option>
