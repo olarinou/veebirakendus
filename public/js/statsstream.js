@@ -6,9 +6,9 @@ function dataRetrival() {
 		var querySetting = e.options[e.selectedIndex].value;
 		var source = new EventSource("/data/"+querySetting);		
 		source.onmessage = function(event) {
-			document.getElementById("result").innerText = event.data;
-			source.close();
+			document.getElementById("result").innerText = event.data;			
 		};
+		source.close();
 		 
 	}
 	else {
