@@ -117,7 +117,8 @@ public function getStats()
 	} 		
 	$mysqli->close();
 	//return $stats_arr;
-	echo $stats_arr;	
+	//echo $stats_arr;	
+	echo date('Y-m-d H:i:s');
 }
 
 public function displaychart()
