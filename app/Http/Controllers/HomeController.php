@@ -189,7 +189,7 @@ public function data()
 				echo "data:	{$erakond}\n";
 				echo "data:	{$piirkond}\n";
 				echo "data:	{$tulemus}\n";	
-				echo "data: \n\n"; 		
+				echo "data:	\n";	
 			}	
 		}
 		$time = date('r');
