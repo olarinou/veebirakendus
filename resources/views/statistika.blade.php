@@ -1,10 +1,9 @@
 @extends('master') 
 @section('main')
 	<div class="container">
-	@section('scripts')
-	@include('statistikastream') 
-    <!--<div id="perf_div"></div>
-   {!! $lava->render('PieChart', 'Info', 'perf_div') !!}-->
-	</div>
+	<p id="result"></p>
+	@section('scripts')	
+	{{ HTML::script('js/statsstream.js') }}
 	@stop
+	</div>
 @stop
