@@ -129,7 +129,7 @@ public function displaychart()
 	$mysqli->close();	
 	//	
 	
-	$chart = $lava->LineChart('Info')
+	$chart = $lava->PieChart('Info')
                     ->setOptions(array(
                         'datatable' => $infoTable,
                         'title' => 'Statistika'
