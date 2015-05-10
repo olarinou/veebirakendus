@@ -10,7 +10,8 @@ function dataRetrival() {
 			source.close();	
 			e = document.getElementById("valik");
 			querySetting = e.options[e.selectedIndex].value;
-			source = new EventSource("/data/"+querySetting);		
+			source = new EventSource("/data/"+querySetting);
+			source.open();	
 		};
 		
 		 
