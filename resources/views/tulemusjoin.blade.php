@@ -11,16 +11,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT tulemused.tulemusID, kandidaadid.kandidaadiID, kandidaadid.nimi, kandidaadid.erakond, kandidaadid.piirkond
-FROM tulemused
-INNER JOIN kandidaadid
-ON tulemused.kandidaadiID=kandidaadid.kandidaadiID;";
+$sql = "SELECT tulemused.tulemusID, kandidaadid.kandidaadiID, kandidaadid.nimi, kandidaadid.erakond, kandidaadid.piirkond, SUM( tulemused.tulemus ) AS Summa FROM tulemused
+   INNER JOIN kandidaadid ON tulemused.kandidaadiID=kandidaadid.kandidaadiID; 
+   GROUP BY kandidaadid.erakond DESC"
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Tulemuse ID: " . $row["tulemusID"]. " - Kandidaadi ID: " . $row["kandidaadiID"]. " - Nimi: " . $row["nimi"]. " - Erakond: " . $row["erakond"]. " - Piirkond " . $row["piirkond"]. "<br>";
+        echo "Tulemuse ID: " . $row["tulemusID"]. " - Kandidaadi ID: " . $row["kandidaadiID"]. " - Nimi: " . $row["nimi"]. " - Erakond: " . $row["erakond"]. " - Piirkond " . $row["piirkond"]. " - Tulemus " . $row["Summa"]. "<br>";
     }
 } else {
     echo "0 results";
