@@ -116,10 +116,8 @@ public function getStats()
 		}	
 	} 		
 	$mysqli->close();
-	//return $stats_arr;
-	//echo $stats_arr;	
-	$test = date('Y-m-d H:i:s');
-	return $test;
+	return $stats_arr;
+	
 }
 
 public function displaychart()
@@ -176,8 +174,11 @@ public function data()
 		header('Content-Type: text/event-stream');
 		header('Cache-Control: no-cache');
 
-		$time = date('r');
-		echo "data: The server time is: {$time}\n\n";
+		$stats = $this->getStats();
+		foreach($stats as $id=>$info)
+		{
+			echo $id, print_r($info);
+		}
 		flush();
 	} 	
 	
