@@ -187,7 +187,7 @@ public function data()
 			$erakond=$rows['erakond'];
 			$piirkond=$rows['piirkond']; 
 			$tulemus=$rows['tulemus']; 			
-			$pushdat+="<br><br><tr>
+			$pushdat = $pushdat."<br><br><tr>
 				<td>{$nimi}</td>
 				<td>{$erakond}</td>
 				<td>{$piirkond}</td>
@@ -197,7 +197,7 @@ public function data()
 		}
 		$time = date('r');
 		$mysqli->close();
-		$pushdat += "<br><br>Uuendatud: {$time}";
+		$pushdat = $pushdat."<br><br>Uuendatud: {$time}";
 		echo "data: {$pushdat}"; 							
 		flush();
 	} 	
