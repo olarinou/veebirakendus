@@ -197,7 +197,7 @@ public function data()
 		$pushdat = $pushdat."<br><br>Uuendatud: {$time}";
 		header('Content-Type: text/event-stream');
 		header('Cache-Control: no-cache');
-		echo "data: {$pushdat}\n\n"; 							
+		data: {$pushdat}\n\n; 							
 		flush();
 	} 	
 	
