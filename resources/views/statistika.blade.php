@@ -2,24 +2,13 @@
 <script src="js/statsstream.js"></script>
 @section('main')
 	<div class="container">
-		<select name="valik">
+		<select name="valik" onload="dataRetrival(this.value)" onchange="dataRetrival(this.value)">
 			<option value="Riik">Riigis</option>
     		<option value="Piirkond">Piirkondades</option>
     		<option value="Partei">Parteides</option>
    			<option value="Kandidaat">Kandidaatides</option>   						
-		<script>
-		if(typeof(EventSource) !== "undefined") {
-		var source = new EventSource("/data/"+value);
-		source.onmessage = function(event) {
-			document.getElementById("result").innerText = event.data;
-		};
-		}
-		else {
-			document.getElementById("result").innerText = "Sorry, your browser does not support server-sent events...";
-		}
-	</script>
 		</select>
 	<br>
-	<p id="result"></p>	
+	<p id="result"></p>
 	</div>
 @stop
