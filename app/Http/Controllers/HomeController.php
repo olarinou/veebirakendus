@@ -188,7 +188,7 @@ public function data()
 			$erakond=$rows['erakond'];
 			$piirkond=$rows['piirkond']; 
 			$tulemus=$rows['tulemus']; 			
-			echo "<tr>
+			echo "<br><tr>
 				<td>{$nimi}</td>
 				<td>{$erakond}</td>
 				<td>{$piirkond}</td>
@@ -198,7 +198,7 @@ public function data()
 		} 		
 		$mysqli->close();
 		//					
-		//flush();
+		flush();
 	} 	
 	
 public function addkandidaadid()
