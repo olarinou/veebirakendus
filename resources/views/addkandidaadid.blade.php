@@ -9,7 +9,17 @@
 			    </div>
 			    <div class="form-group">
 			        <label for="erakond">Erakond:</label>
-			        <input type="text" class="form-control" name="erakond" id="erakond" placeholder="Erakond" required>
+			        <select class="form-control" name="erakond" id="erakond" required>
+			        	<option>Merkuur</option>
+    					<option>Veenus</option>
+    					<option>Maa</option>
+   						<option>Marss</option>
+   						<option>Jupiter</option>
+    					<option>Saturn</option>
+    					<option>Uraan</option>
+   						<option>Neptuun</option>
+   						<option>Pluuto</option>
+    				</select>
 			    </div>
 			    <div class="form-group">
 			        <label for="piirkond">Piirkond:</label>
