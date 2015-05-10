@@ -205,7 +205,7 @@ public function data($opt)
 			while($rows = $query->fetch_assoc()){ 							
 				$erakond=$rows['erakond'];				
 				$piirkond=$rows['piirkond']; 
-				$tulemus=$rows['summa'];
+				$tulemus=$rows['Summa'];
 					echo "data:	{$erakond}\n";
 					echo "data:	{$piirkond}\n";
 					echo "data:	{$tulemus}\n";
