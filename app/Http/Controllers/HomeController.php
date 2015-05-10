@@ -118,7 +118,8 @@ public function getStats()
 	$mysqli->close();
 	//return $stats_arr;
 	//echo $stats_arr;	
-	echo date('Y-m-d H:i:s');
+	$test = date('Y-m-d H:i:s');
+	return test;
 }
 
 public function displaychart()
@@ -170,6 +171,12 @@ public function statistika()
 		//return view('statistika', array('stats'=>$stats));
 	} 
 
+public function data()
+	{
+		$stats = $this->getStats();
+		return view('data', array('stats'=>$stats));
+	} 	
+	
 public function addkandidaadid()
 	{
 		if(Auth::check())
