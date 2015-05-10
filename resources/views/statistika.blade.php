@@ -11,7 +11,7 @@
 	<br>
 	<p id="result"></p>
 	<script>
-	dataRetrival();
+	incrediblystupidloop();
 	</script>
 	</div>
 @stop
