@@ -1,5 +1,6 @@
 @extends('master')
-<script src="js/ajaxioma.js"></script>	 
+<script src="js/ajaxioma.js"></script>
+<script src="js/viide.js"></script>	 
 @section('main')
 <div class="container">	
 <form>
