@@ -9,9 +9,9 @@
    			<option value="Kandidaat">Kandidaatides</option>   						
 		</select>
 	<br>
-	<p id="result"></p>	
+	<p id="result"></p>		
 	<script type="text/javascript">
 		dataRetrival();
-	</script>
+	</script>	
 	</div>
 @stop

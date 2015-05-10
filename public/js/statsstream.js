@@ -1,12 +1,14 @@
 
-function dataRetrival() {	
+function dataRetrival(valik) {	
 	if(typeof(EventSource) !== "undefined") {
 		var e = document.getElementById("valik");
 		querySetting = e.options[e.selectedIndex].value;
 		var source = new EventSource("/data/"+querySetting);
 		source.onmessage = function(event) {
 			document.getElementById("result").innerText = event.data;
-			continue;
+			e = document.getElementById("valik");
+			querySetting = e.options[e.selectedIndex].value;
+			source=EventSource("/data/"+querySetting);	
 		};
 	}
 	else {
