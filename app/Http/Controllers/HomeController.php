@@ -220,7 +220,7 @@ public function data($opt)
 		echo "data:	Uuendatud: {$time}\n";		
 		echo "data: \n\n"; 							
 		flush();
-		sleep(1);
+		sleep(100);
 	} 	
 	
 public function addkandidaadid()

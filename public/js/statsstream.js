@@ -6,6 +6,7 @@ function dataRetrival() {
 		var source = new EventSource("/data/"+querySetting);
 		source.onmessage = function(event) {
 			document.getElementById("result").innerText = event.data;
+			continue;
 		};
 	}
 	else {
