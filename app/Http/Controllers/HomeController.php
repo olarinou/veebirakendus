@@ -119,7 +119,7 @@ public function getStats()
 	//return $stats_arr;
 	//echo $stats_arr;	
 	$test = date('Y-m-d H:i:s');
-	return test;
+	return $test;
 }
 
 public function displaychart()
