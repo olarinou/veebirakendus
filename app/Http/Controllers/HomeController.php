@@ -183,7 +183,7 @@ public function data()
 				<td>{$id[1]}</td>
 				<td>{$id[2]}</td>
 				<td>{$id[3]}</td>
-			</tr>"
+			</tr>";
         }
 		echo "Uuendatud: {$time}";		
 		flush();
