@@ -20,5 +20,5 @@ function dataRetrival() {
 function incrediblystupidloop(){
 	while(true){
 	dataRetrival();
-	}
+	};
 }
