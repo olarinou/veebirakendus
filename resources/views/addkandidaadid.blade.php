@@ -13,7 +13,12 @@
 			    </div>
 			    <div class="form-group">
 			        <label for="piirkond">Piirkond:</label>
-			        <input type="text" class="form-control" name="piirkond" id="piirkond" placeholder="Piirkond" required>
+			        <select class="form-control" name="piirkond" id="piirkond" required>
+			        	<option>1</option>
+    					<option>2</option>
+    					<option>3</option>
+   						<option>4</option>
+  					</select>
 			    </div>
 			    <button type="submit" class="btn btn-default">Lisa</button>
 			</form>	
