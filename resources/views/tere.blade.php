@@ -6,10 +6,10 @@
 <form>
 <select name="users" onchange="showUser(this.value)">
   <option value="">Vali nimi:</option>
-  <option value="1">d</option>
-  <option value="3">Ysyd</option>
-  <option value="12">Test</option>
-  <option value="13">Kannike</option>
+  <option value="22">Peeter Paan</option>
+  <option value="23">Tõnu Tõukemõnu</option>
+  <option value="24">Aita Leida</option>
+  <option value="25">Heli Kopter</option>
   </select>
 </form>
 <br>
