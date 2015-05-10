@@ -1,7 +1,7 @@
 @extends('master') 
 <script src="js/statsstream.js"></script>
 @section('main')
-	<div class="container" onLoad="dataRetrival()>
+	<div class="container">
 		<select name="valik" onchange="setQuery(this.value)">
 			<option value="Riik">Riigis</option>
     		<option value="Piirkond">Piirkondades</option>
@@ -9,6 +9,6 @@
    			<option value="Kandidaat">Kandidaatides</option>   						
 		</select>
 	<br>
-	<p id="result"></p>
+	<p id="result" onLoad="dataRetrival()"></p>
 	</div>
 @stop
