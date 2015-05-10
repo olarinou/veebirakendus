@@ -172,7 +172,11 @@ public function statistika()
 public function data()
 	{
 		header('Content-Type: text/event-stream');
-		header('Cache-Control: no-cache');		
+		header('Cache-Control: no-cache');	
+		echo "data: @extends('master')\n"; 
+		echo "data: @section('main')\n"; 
+		echo 'data: <div class="container">"\n'; 
+
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
 		$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
 		JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
