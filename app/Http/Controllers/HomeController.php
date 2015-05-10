@@ -177,7 +177,7 @@ public function data($opt)
 		
 		if($opt == "Kandidaat"){
 			$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
-			JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
+			JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) GROUP BY t.tulemus DESC");
 	
 			if($query->num_rows != 0){		
 	
@@ -190,10 +190,30 @@ public function data($opt)
 					echo "data:	{$nimi}\n";				
 					echo "data:	{$erakond}\n";
 					echo "data:	{$piirkond}\n";
-					echo "data:	{$tulemus}\n";				
+					echo "data:	{$tulemus}\n";
+					echo "data:	 \n";			
 				}	
 			}
 		}
+		else if($opt == "Riik"){
+			$query = $mysqli->query("SELECT k.erakond, k.piirkond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
+			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
+			GROUP BY k.erakond DESC ");
+	
+			if($query->num_rows != 0){		
+	
+			while($rows = $query->fetch_assoc()){ 							
+				$erakond=$rows['erakond'];				
+				$piirkond=$rows['piirkond']; 
+				$tulemus=$rows['summa'];
+					echo "data:	{$erakond}\n";
+					echo "data:	{$piirkond}\n";
+					echo "data:	{$tulemus}\n";
+					echo "data:	 \n";			
+				}	
+			}
+		}
+		
 		$time = date('r');
 		$mysqli->close();
 		
