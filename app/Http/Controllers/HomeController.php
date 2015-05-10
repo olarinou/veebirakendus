@@ -173,8 +173,12 @@ public function statistika()
 
 public function data()
 	{
-		$stats = $this->getStats();
-		return view('data', array('stats'=>$stats));
+		header('Content-Type: text/event-stream');
+		header('Cache-Control: no-cache');
+
+		$time = date('r');
+		echo "data: The server time is: {$time}\n\n";
+		flush();
 	} 	
 	
 public function addkandidaadid()
