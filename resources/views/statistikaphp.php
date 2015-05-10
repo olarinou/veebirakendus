@@ -29,6 +29,6 @@ $infoTable = Lava::DataTable();
 	
 	$chart = Lava::LineChart('infoChart');
 	$chart->datatable($infoTable);
-	$chart->render();
+	$chart->render('LineChart','infoChart','chart',true);
 	
 ?>
