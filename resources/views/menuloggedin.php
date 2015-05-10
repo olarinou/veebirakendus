@@ -8,7 +8,7 @@
           	<li><a href="#">Tühista hääl</a></li>
           	<li><a href="/otsing">Otsing</a></li>
           	<li><a href="/tulemus">Tulemuste jälgimine</a></li>
-          	<li><a href="#">Statistika</a></li>
+          	<li><a href="/statistika">Statistika</a></li>
 			<li><a href="/tere">Ajax</a></li>
     </ul>				
 </nav>

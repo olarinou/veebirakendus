@@ -96,6 +96,11 @@ public function postotsing()
 	return view('search');
 }	
 
+public function statistika()
+	{
+		return view('statistika');
+	} 
+
 public function addkandidaadid()
 	{
 		if(Auth::check())
