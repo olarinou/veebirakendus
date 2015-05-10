@@ -12,8 +12,8 @@ if ($conn->connect_error) {
 } 
 
 $sql = "SELECT tulemused.tulemusID, kandidaadid.kandidaadiID, kandidaadid.nimi, kandidaadid.erakond, kandidaadid.piirkond, SUM( tulemused.tulemus ) AS Summa FROM tulemused
-   INNER JOIN kandidaadid ON tulemused.kandidaadiID=kandidaadid.kandidaadiID; 
-   GROUP BY kandidaadid.erakond DESC"
+   INNER JOIN kandidaadid ON tulemused.kandidaadiID=kandidaadid.kandidaadiID 
+   GROUP BY Summa DESC";
 
 $result = $conn->query($sql);
 
