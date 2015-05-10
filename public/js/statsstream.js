@@ -1,6 +1,6 @@
 var querySetting = "Riik";
 
-function dataRetrival() {
+function dataRetrival(querySetting) {
 	if(typeof(EventSource) !== "undefined") {
 		var source = new EventSource("/data/"+querySetting);
 		source.onmessage = function(event) {

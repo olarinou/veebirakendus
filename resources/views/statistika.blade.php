@@ -9,6 +9,6 @@
    			<option value="Kandidaat">Kandidaatides</option>   						
 		</select>
 	<br>
-	<p id="result" onLoad="dataRetrival()"></p>
+	<p id="result" onLoad="dataRetrival(valik)"></p>
 	</div>
 @stop
