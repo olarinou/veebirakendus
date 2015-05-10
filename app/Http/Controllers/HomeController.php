@@ -172,9 +172,7 @@ public function statistika()
 public function data()
 	{
 		header('Content-Type: text/event-stream');
-		header('Cache-Control: no-cache');
-		$time = date('r');
-		echo "Uuendatud: {$time}";
+		header('Cache-Control: no-cache');		
 		//
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
 		$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
@@ -188,14 +186,16 @@ public function data()
 			$erakond=$rows['erakond'];
 			$piirkond=$rows['piirkond']; 
 			$tulemus=$rows['tulemus']; 			
-			echo "<br><tr>
+			echo "data: <br><tr>
 				<td>{$nimi}</td>
 				<td>{$erakond}</td>
 				<td>{$piirkond}</td>
 				<td>{$tulemus}</td>
 			</tr>";
 			}	
-		} 		
+		}
+		$time = date('r');
+		echo "data: Uuendatud: {$time}"; 		
 		$mysqli->close();
 		//					
 		flush();
