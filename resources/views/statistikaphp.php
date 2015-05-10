@@ -27,8 +27,8 @@ $infoTable = Lava::DataTable();
 	$mysqli->close();
 	//	
 	
-	$chart = Lava::PieChart('infoChart');
+	$chart = Lava::LineChart('infoChart');
 	$chart->datatable($infoTable);
-	echo Lava::render('PieChart', 'infoChart', 'infoTable', true);
+	echo $linechart->render('infoChart');
 	
 ?>
