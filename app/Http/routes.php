@@ -26,6 +26,6 @@ Route::get('/tere',['as'=>'tere','uses'=>"HomeController@tere"]);
 Route::match(['get', 'post'],'/haaletus',['as'=>'haaletus','uses'=>"HomeController@haaletus"]);
 Route::match(['get', 'post'],'/statistika',['as'=>'statistika','uses'=>"HomeController@displaychart"]);
 Route::get('/statistika', 'HomeController@statistika');
-Route::get('/data/{opt}', 'HomeController@[data($opt)]');
+Route::get('/data/{opt}', 'HomeController@data');
  
 Route::controller('/','Auth\AuthController');
