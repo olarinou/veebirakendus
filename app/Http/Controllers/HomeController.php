@@ -218,7 +218,7 @@ public function data($opt)
 		$time = date('r');
 		$mysqli->close();
 		
-		echo "data:	Uuendatud: {$time}\n";		
+		echo "data:	Uuendatud: {$time}\n\n";		
 		echo "data: \n\n"; 							
 		flush();
 		sleep(1);
