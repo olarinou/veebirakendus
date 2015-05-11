@@ -226,9 +226,9 @@ public function data($opt)
 
 public function data2($a, $b, $c)
 	{		
-		$a=>$ala;
-		$b=>$partei;
-		$c=>$lisa;			
+		$a=$ala;
+		$b=$partei;
+		$c=$lisa;			
 		if($lisa == "kandidaat")
 		{
 			if($ala == "Riik")
