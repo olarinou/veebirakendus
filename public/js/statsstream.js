@@ -4,11 +4,9 @@ function dataRetrival() {
 	if(typeof(EventSource) !== "undefined") {	
 		//var e = document.getElementById("valik");
 		//var querySetting = e.options[e.selectedIndex].value;
-		var source = new EventSource("/data/Kandidaat");
-		source.onopen = function() {
-			source.onmessage = function(event) {
-				document.getElementById("result").innerText = event.data;
-			}								
+		var source = new EventSource("/data/Kandidaat");		
+		source.onmessage = function(event) {
+			document.getElementById("result").innerText = event.data;						
 		};
 		 
 	}
