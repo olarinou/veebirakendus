@@ -33,27 +33,17 @@ function responseAjax() {
   }
   
  function statsRetrival() {
-    
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("result").innerHTML = xmlhttp.responseText;
-            }
-        }
-		var e = document.getElementById("ala");
+	var e = document.getElementById("ala");
 		var ala = e.options[e.selectedIndex].value;
 		e = document.getElementById("partei");
 		var partei = e.options[e.selectedIndex].value;
 		e = document.getElementById("lisa");
 		var lisa = e.options[e.selectedIndex].value;
-		 document.write(ala, partei, lisa);
-        xmlhttp.open("GET","/data2/"+ala+"/"+partei+"/"+lisa,true);
-        xmlhttp.send();
+	var myRequest = new XMLHttpRequest();
+		myRequest.open("GET", "/data2/"+ala+"/"+partei+"/"+lisa, true);
+		myRequest.onreadystatechange = responseAjax;
+        myRequest.setRequestHeader("Cache-Control", "no-cache");
+		myRequest.send(null);   
+        
     }
 } 
