@@ -231,7 +231,8 @@ public function data2($a, $b, $c)
 		$lisa = "";
 		$a=$ala;
 		$b=$partei;
-		$c=$lisa;			
+		$c=$lisa;
+		$str = "";
 		if($lisa == "kandidaat")
 		{
 			if($ala == "Riik")
