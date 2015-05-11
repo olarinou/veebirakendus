@@ -291,8 +291,6 @@ public function data2($a, $b, $c)
 				}
 			}			
 		}
-		echo "wht";
-		echo $str;	
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
 		
 		if($lisa == "kandidaat")
