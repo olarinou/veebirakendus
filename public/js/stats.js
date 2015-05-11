@@ -17,7 +17,7 @@ function statsRetrival(str) {
                 document.getElementById("result").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","/getuser?q=22",true);
+        xmlhttp.open("GET","/data/"+ala+partei+lisa,true);
         xmlhttp.send();
     	
 } 
