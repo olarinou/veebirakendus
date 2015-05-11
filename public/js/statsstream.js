@@ -6,16 +6,16 @@ function dataRetrival() {
 		//var querySetting = e.options[e.selectedIndex].value;
 		var source = new EventSource("/data/Kandidaat");		
 		source.onmessage = function(event) {
-			document.getElementById("result").innerText = event.data;						
+			document.getElementById("result").innerHTML = event.data;						
 		};
 		 
 	}
 	else {
 		document.getElementById("result").innerText = "Sorry, your browser does not support server-sent events...";
-		myRequest.open("GET", "/data/Kandidaat", true);
+		/*myRequest.open("GET", "/data/Kandidaat", true);
 		myRequest.onreadystatechange = responseAjax;
         myRequest.setRequestHeader("Cache-Control", "no-cache");
-		myRequest.send(null);
+		myRequest.send(null);*/
 	}
 }
 
