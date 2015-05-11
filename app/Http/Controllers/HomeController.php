@@ -173,8 +173,7 @@ public function data($opt)
 	{		
 		header('Content-Type: text/event-stream');
 		header('Cache-Control: no-cache');
-		header('Connection: keep-alive');	
-		header('Content-Length: unspecified');
+		header('Connection: keep-alive');			
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
 		
 		if($opt == "Kandidaat"){
