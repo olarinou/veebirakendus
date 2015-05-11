@@ -253,7 +253,7 @@ public function data2($opt)
 		else if($opt == "Riik"){
 			$query = $mysqli->query("SELECT k.erakond, k.piirkond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
 			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
-			GROUP BY k.erakond DESC ");
+			GROUP BY k.erakond ORDER BY Summa DESC ");
 	
 			if($query->num_rows != 0){		
 	
@@ -263,6 +263,42 @@ public function data2($opt)
 				$tulemus=$rows['Summa'];
 					echo "{$erakond}<br>";
 					echo "{$piirkond}<br>";
+					echo "{$tulemus}<br>";
+					echo "<br>";			
+				}	
+			}
+		}
+		
+		else if($opt == "Piirkond"){
+			$query = $mysqli->query("SELECT k.piirkond, k.erakond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
+			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
+			GROUP BY k.piirkond, k.erakond ORDER BY k.piirkond, Summa DESC ");
+	
+			if($query->num_rows != 0){		
+	
+			while($rows = $query->fetch_assoc()){
+				$piirkond=$rows['piirkond'];
+				$erakond=$rows['erakond'];					
+				$tulemus=$rows['Summa'];					
+					echo "{$piirkond}<br>";
+					echo "{$erakond}<br>";
+					echo "{$tulemus}<br>";
+					echo "<br>";			
+				}	
+			}
+		}
+		
+		else if($opt == "Partei"){
+			$query = $mysqli->query("SELECT k.erakond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
+			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
+			GROUP BY k.erakond ORDER BY Summa DESC");
+	
+			if($query->num_rows != 0){		
+	
+			while($rows = $query->fetch_assoc()){ 							
+				$erakond=$rows['erakond'];
+				$tulemus=$rows['Summa'];
+					echo "{$erakond}<br>";					
 					echo "{$tulemus}<br>";
 					echo "<br>";			
 				}	
