@@ -1,10 +1,27 @@
+var e;
+var ala;
+var partei;
+var lisa;
+
+function responseAjax() {
+     if(myRequest.readyState == 4) {
+        if(myRequest.status == 200) {
+            result = myRequest.responseText;
+            document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
+            alert("we made it");
+        } else {
+            alert( " An error has occurred: " + myRequest.statusText);
+        }
+     }
+  }
+
 function statsRetrival() {
-	var e = document.getElementById("ala");
-	var ala = e.options[e.selectedIndex].value;
+	e = document.getElementById("ala");
+	ala = e.options[e.selectedIndex].value;
 	e = document.getElementById("partei");
-	var partei = e.options[e.selectedIndex].value;
+	partei = e.options[e.selectedIndex].value;
 	e = document.getElementById("lisa");
-	var lisa = e.options[e.selectedIndex].value;
+	lisa = e.options[e.selectedIndex].value;
     //document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
 	myRequest.open("GET", "/data/Kandidaat", true);
 	myRequest.onreadystatechange = responseAjax;
