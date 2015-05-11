@@ -6,7 +6,7 @@ function dataRetrival() {
 		//var querySetting = e.options[e.selectedIndex].value;
 		var source = new EventSource("/data/Kandidaat");		
 		source.onmessage = function(event) {
-			document.getElementById("result").innerHTML = event.data.replace(/IbrRI/g, "<br>");						
+			document.getElementById("result").innerHTML = event.data;						
 		};
 		 
 	}

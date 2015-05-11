@@ -189,11 +189,11 @@ public function data($opt)
 				$erakond=$rows['erakond'];
 				$piirkond=$rows['piirkond']; 
 				$tulemus=$rows['summa'];			
-					echo "data:	{$nimi}\n";				
-					echo "data:	{$erakond}\n";
-					echo "data:	{$piirkond}\n";
-					echo "data:	{$tulemus}\n";
-					echo "data:	 IbrRI\n";			
+					echo "data:	{$nimi}<br>\n";				
+					echo "data:	{$erakond}<br>\n";
+					echo "data:	{$piirkond}<br>\n";
+					echo "data:	{$tulemus}<br>\n";
+					echo "data:	 <br><br>\n";			
 				}	
 			}
 		}
