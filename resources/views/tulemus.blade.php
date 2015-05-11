@@ -1,6 +1,10 @@
 @extends('master')
+<script src="js/statsstream.js"></script>
 @section('main')
 		<div class="container">	
-			@include('tulemusjoin')
+		<p id="result"></p>
+			<script>
+			dataRetrival();
+			</script>
 		</div>
 @stop
