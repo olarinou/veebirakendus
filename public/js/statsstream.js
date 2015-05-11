@@ -33,8 +33,8 @@ function responseAjax() {
   }
   
  function statsRetrival() {
-    document.getElementById("result").innerText = "test";	
-        if (window.XMLHttpRequest) {
+    document.getElementById("result").innerHTML = "test";	
+    /*    if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
         } else {
@@ -55,4 +55,5 @@ function responseAjax() {
         xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",true);
         xmlhttp.send();
     }
+	*/
 } 
