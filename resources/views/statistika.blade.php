@@ -4,7 +4,7 @@
 	<div class="container">
 	Häälte jagunemine:
 		<table style="width:100%">		
-		<tr><th>Ala</th>
+		<tr>
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
@@ -24,7 +24,7 @@
 			<option value="Hiiu">Hiiu</option> 
 		</select>
 		</tr>
-		<tr><th>Partei</th> 
+		<tr> 
 		<select id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -38,7 +38,7 @@
     		<option value="Pluto">Pluto</option>
 		</select>
 		</tr>
-		<tr><th>Lisa</th>
+		<tr>
 		<select id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
