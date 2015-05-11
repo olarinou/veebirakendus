@@ -315,7 +315,7 @@ public function data2($a, $b, $c)
 		}		
 		else
 		{
-			$query = $mysqli->query
+			$query = $mysqli->query;
 			if($query->num_rows != 0){		
 	
 			while($rows = $query->fetch_assoc()){				
