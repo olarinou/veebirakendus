@@ -23,7 +23,7 @@ function responseAjax() {
      if(myRequest.readyState == 4) {
         if(myRequest.status == 200) {
             result = myRequest.responseText;
-            document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
+            document.getElementById("result").innerHTML = "test";
         } else {
             alert( " An error has occurred: " + myRequest.statusText);
         }
