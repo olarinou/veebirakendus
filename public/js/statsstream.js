@@ -32,11 +32,8 @@ function responseAjax() {
      }
   }
   
- function statsRetrival(str) {
-    if (str == "") {
-        document.getElementById("valik").innerHTML = "";
-        return;
-    } else { 
+ function statsRetrival() {
+    
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -49,7 +46,13 @@ function responseAjax() {
                 document.getElementById("result").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","/data2/"+str,true);
+		var e = document.getElementById("ala");
+		var ala = e.options[e.selectedIndex].value;
+		e = document.getElementById("partei");
+		var partei = e.options[e.selectedIndex].value;
+		e = document.getElementById("lisa");
+		var lisa = e.options[e.selectedIndex].value;
+        xmlhttp.open("GET","/data2/"+ala+"/"+partei+"/"+lisa,true);
         xmlhttp.send();
     }
 } 
