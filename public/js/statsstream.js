@@ -52,6 +52,7 @@ function responseAjax() {
 		var partei = e.options[e.selectedIndex].value;
 		e = document.getElementById("lisa");
 		var lisa = e.options[e.selectedIndex].value;
+		 document.write(ala, partei, lisa);
         xmlhttp.open("GET","/data2/"+ala+"/"+partei+"/"+lisa,true);
         xmlhttp.send();
     }
