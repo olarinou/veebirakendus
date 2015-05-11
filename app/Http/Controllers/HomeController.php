@@ -221,7 +221,7 @@ public function data($opt)
 		echo "data:	Uuendatud: {$time}\n\n";		
 		//echo "data: \n\n"; 							
 		flush();
-		sleep(1);
+		//sleep(1);
 	} 	
 
 public function data2($a, $b, $c)
