@@ -1,4 +1,4 @@
-
+var myRequest = new XMLHttpRequest();
 
 function dataRetrival() {	
 	if(typeof(EventSource) !== "undefined") {	
@@ -12,7 +12,6 @@ function dataRetrival() {
 	}
 	else {
 		document.getElementById("result").innerText = "Sorry, your browser does not support server-sent events...";
-		var myRequest = new XMLHttpRequest();
 		myRequest.open("GET", "/data/Kandidaat", true);
 		myRequest.onreadystatechange = responseAjax;
         myRequest.setRequestHeader("Cache-Control", "no-cache");
@@ -24,8 +23,7 @@ function responseAjax() {
      if(myRequest.readyState == 4) {
         if(myRequest.status == 200) {
             result = myRequest.responseText;
-            alert(result);
-            alert("we made it");
+            document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
         } else {
             alert( " An error has occurred: " + myRequest.statusText);
         }
@@ -39,7 +37,12 @@ function responseAjax() {
 	var partei = e.options[e.selectedIndex].value;
 	e = document.getElementById("lisa");
 	var lisa = e.options[e.selectedIndex].value;
-    //document.getElementById("result").innerHTML = "test"+ala+partei+lisa;	
+    //document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
+	myRequest.open("GET", "/data/Kandidaat", true);
+	myRequest.onreadystatechange = responseAjax;
+    myRequest.setRequestHeader("Cache-Control", "no-cache");
+	myRequest.send(null);
+	/*	
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -54,6 +57,6 @@ function responseAjax() {
         }		
         xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",true);
         xmlhttp.send();
-    }
+    }/*
 	
 } 
