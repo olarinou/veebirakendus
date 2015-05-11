@@ -3,7 +3,7 @@
 @section('main')
 		<div class="container">	
 		<p id="result"></p>
-			<script>
+			<script type='text/javascript'>
 			dataRetrival();
 			</script>
 		</div>

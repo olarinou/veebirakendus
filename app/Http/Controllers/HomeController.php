@@ -171,9 +171,8 @@ public function statistika()
 
 public function data($opt)
 	{		
-		header('Content-Type: text/event-stream');
-		header('Cache-Control: no-cache');
-		header('Connection: keep-alive');			
+		header('Content-Type: text/event-stream');		
+		header('Cache-Control: no-cache');				
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
 		
 		if($opt == "Kandidaat"){
