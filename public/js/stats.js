@@ -15,7 +15,7 @@ function statsRetrival() {
         }
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("result").innerHTML = xmlhttp.responseText;
+                document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
             }
         }		
         xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",true);
