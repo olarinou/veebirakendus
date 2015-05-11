@@ -224,8 +224,9 @@ public function data($opt)
 		sleep(1);
 	} 	
 
-public function data2($ala,$partei,$lisa)
+public function data2($a, $b, $c)
 	{		
+		echo $a, $b, $c;
 		$str = "";		
 		if($lisa == "kandidaat")
 		{
