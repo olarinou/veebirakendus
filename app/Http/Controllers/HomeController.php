@@ -209,10 +209,10 @@ public function data($opt)
 				$erakond=$rows['erakond'];				
 				$piirkond=$rows['piirkond']; 
 				$tulemus=$rows['Summa'];
-					echo "data:	{$erakond}\n";
-					echo "data:	{$piirkond}\n";
-					echo "data:	{$tulemus}\n";
-					echo "data:	 \n";			
+					echo "data:	{$erakond} \n";
+					echo "data:	{$piirkond} \n";
+					echo "data:	{$tulemus} \n";
+					echo "data:	 <br>\n";			
 				}	
 			}
 		}
