@@ -291,9 +291,9 @@ public function data2($a, $b, $c)
 				}
 			}			
 		}
-		
-		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
 		echo $str;	
+		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');	
+		
 		if($lisa == "kandidaat")
 		{	
 			$query = $mysqli->query($str);	
