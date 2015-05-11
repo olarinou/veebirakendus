@@ -241,11 +241,11 @@ public function data2($opt)
 				$erakond=$rows['erakond'];
 				$piirkond=$rows['piirkond']; 
 				$tulemus=$rows['summa'];			
-					echo "{$nimi}\n";				
-					echo "{$erakond}\n";
-					echo "{$piirkond}\n";
-					echo "{$tulemus}\n";
-					echo "\n";			
+					echo "{$nimi}<br>";				
+					echo "{$erakond}<br>";
+					echo "{$piirkond}<br>";
+					echo "{$tulemus}<br>";
+					echo "<br>";			
 				}	
 			}
 		}
@@ -261,10 +261,10 @@ public function data2($opt)
 				$erakond=$rows['erakond'];				
 				$piirkond=$rows['piirkond']; 
 				$tulemus=$rows['Summa'];
-					echo "{$erakond}\n";
-					echo "{$piirkond}\n";
-					echo "{$tulemus}\n";
-					echo "\n";			
+					echo "{$erakond}<br>";
+					echo "{$piirkond}<br>";
+					echo "{$tulemus}<br>";
+					echo "<br>";			
 				}	
 			}
 		}
@@ -272,8 +272,8 @@ public function data2($opt)
 		$time = date('r');
 		$mysqli->close();
 		
-		echo "Uuendatud: {$time}\n";		
-		echo "\n\n"; 						
+		echo "Uuendatud: {$time}<br>";		
+		echo "<br>"; 						
 		
 	} 		
 	
