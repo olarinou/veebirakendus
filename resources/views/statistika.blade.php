@@ -1,5 +1,5 @@
 @extends('master') 
-<script src="js/statsstream.js"></script>
+<script src="js/stats.js"></script>
 @section('main')
 	<div class="container">
 	Häälte jagunemine:
