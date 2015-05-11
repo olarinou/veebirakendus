@@ -18,8 +18,7 @@ if($query->num_rows != 0){
 		echo '<input type="radio" name="valitu" value="' . $kandid . '"> ID: ' .$kandid. ' <strong> Nimi: ' .$nimi. '</strong> 
 		Erakond: ' .$erakond. ' Piirkond: ' .$piirkond; 
 		echo ' <br><br>';
-		}
-	include "vote.php"; 
+		}	
 	echo '<br><p><input type="submit" name="voteSubmit" value="Vali kandidaat" /></p></form>';
 	} 
 else { 
