@@ -193,7 +193,7 @@ public function data($opt)
 					echo "data:	{$erakond}\n";
 					echo "data:	{$piirkond}\n";
 					echo "data:	{$tulemus}\n";
-					echo "data:	 \n";			
+					echo "data:	 IbrRI\n";			
 				}	
 			}
 		}
