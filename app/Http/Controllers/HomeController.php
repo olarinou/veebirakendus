@@ -171,9 +171,11 @@ public function statistika()
 
 public function data($opt)
 	{		
-		header('Content-Type: text/event-stream');		
-		header('Cache-Control: no-cache');				
-		/*$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+		header('Content-Type: text/event-stream');
+		header('Cache-Control: no-cache');
+		header('Connection: keep-alive');	
+		
+		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
 		
 		if($opt == "Kandidaat"){
 			$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, SUM(t.tulemus) as summa FROM kandidaadid as k
@@ -214,12 +216,12 @@ public function data($opt)
 				}	
 			}
 		}
-		*/
-		$time = date('r');
-		//$mysqli->close();
 		
-		echo "data:	Uuendatud: {$time}\n\n";		
-		//echo "data: \n\n"; 							
+		$time = date('r');
+		$mysqli->close();
+		
+		echo "data:	Uuendatud: {$time}\n";		
+		echo "data: \n\n"; 							
 		flush();
 		sleep(1);
 	} 	
