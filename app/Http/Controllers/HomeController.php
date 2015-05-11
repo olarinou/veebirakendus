@@ -258,7 +258,7 @@ public function data2($a, $b, $c)
 				else
 				{
 					$str = "SELECT k.nimi, k.erakond, k.piirkond, SUM(t.tulemus) as summa FROM kandidaadid as k
-					JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) WHERE (k.piirkond LIKE '".$ala."%' AND k.erakond = ".$partei.") GROUP BY k.kandidaadiID, k.erakond ORDER BY k.piirkond, summa DESC";
+					JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) WHERE (k.piirkond LIKE '".$ala."%' AND k.erakond = '".$partei."') GROUP BY k.kandidaadiID, k.erakond ORDER BY k.piirkond, summa DESC";
 				}
 			}			
 		}
@@ -287,7 +287,7 @@ public function data2($a, $b, $c)
 				else
 				{
 					$str = "SELECT k.erakond, k.piirkond, SUM(t.tulemus) as summa FROM kandidaadid as k
-					JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) WHERE (k.piirkond LIKE '".$ala."%' AND k.erakond = ".$partei.") GROUP BY k.erakond, k.erakond ORDER BY k.piirkond, summa DESC";
+					JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) WHERE (k.piirkond LIKE '".$ala."%' AND k.erakond = '".$partei."') GROUP BY k.erakond, k.erakond ORDER BY k.piirkond, summa DESC";
 				}
 			}			
 		}
