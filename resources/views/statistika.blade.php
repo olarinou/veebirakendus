@@ -45,7 +45,7 @@
 		</select>
 		</tr>
 		<tr>
-		<button onclick="statsRetrival()">OK</button>
+		<button onclick="statsRetrival(22)">OK</button>
 		</tr>
 		</table>		
 		
