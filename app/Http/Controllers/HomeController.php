@@ -226,6 +226,9 @@ public function data($opt)
 
 public function data2($a, $b, $c)
 	{		
+		$ala = "";
+		$partei = "";
+		$lisa = "";
 		$a=$ala;
 		$b=$partei;
 		$c=$lisa;			
