@@ -340,13 +340,13 @@ public function data2($a, $b, $c)
 
 public function haaletusPost()
 	{
-		$link = mysqli_connect("localhost", "root", "Admin123", "vv_db");
-
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+	$link = mysqli_connect("localhost", "root", "Admin123", "vv_db");
+	$msg="";
+	if($link === false){
+		die("ERROR: Could not connect. " . mysqli_connect_error());
+	}
  
-if (isset($_POST['voteSubmit'])) {
+	if (isset($_POST['voteSubmit'])) {
 
 	
 	if (!empty($_POST['valitu'])) {
@@ -357,12 +357,13 @@ if (isset($_POST['voteSubmit'])) {
 		
 		if(mysqli_query($link, $sql)){
     		//include ("addkandidaadid.php");
-    		echo "Lisatud";
+    		$msg= "Lisatud";
 		} else{
-    		echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);}
+    		$msg= "ERROR: Could not able to execute $sql. " . mysqli_error($link);}
 		//$valitud_isik=$_POST['valitu'];
 		} 
-	else { echo "Palun vali kandidaat."; }
+	else { $msg= "Palun vali kandidaat."; }
+	return view('haalkinnitatud',['response' => $msg]);
 	}
 
 
