@@ -17,7 +17,7 @@ function statsRetrival(str) {
                 document.getElementById("result").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","/getuser?q="+str,true);
+        xmlhttp.open("GET","/getuser?q=22",true);
         xmlhttp.send();
     	
 } 
