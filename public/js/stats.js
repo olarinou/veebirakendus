@@ -6,20 +6,8 @@ function statsRetrival() {
 	e = document.getElementById("lisa");
 	var lisa = e.options[e.selectedIndex].value;
     //document.getElementById("result").innerHTML = "test"+ala+partei+lisa;	
-	if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("result").innerHTML = "test"+ala+partei+lisa;
-            }
-        }		
-        xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",true);
-        xmlhttp.send();
-    }
+	xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",false);
+    xmlhttp.send();
+	document.getElementById("result").innerHTML=xmlhttp.responseText;
 	
 } 
