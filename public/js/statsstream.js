@@ -39,8 +39,8 @@ function responseAjax() {
 	var partei = e.options[e.selectedIndex].value;
 	e = document.getElementById("lisa");
 	var lisa = e.options[e.selectedIndex].value;
-    document.getElementById("result").innerHTML = "test"+ala+partei+lisa;	
-    /*    if (window.XMLHttpRequest) {
+    //document.getElementById("result").innerHTML = "test"+ala+partei+lisa;	
+        if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
         } else {
@@ -55,5 +55,5 @@ function responseAjax() {
         xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",true);
         xmlhttp.send();
     }
-	*/
+	
 } 
