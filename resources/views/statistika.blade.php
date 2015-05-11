@@ -4,12 +4,7 @@
 	<div class="container">
 	Häälte jagunemine:
 		<table style="width:100%">		
-		<tr>
-		<th>Ala</th>
-		<th>Partei</th> 
-		<th>Lisa</th>
-		</tr>
-		<tr>
+		<tr><th>Ala</th>
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
@@ -29,7 +24,7 @@
 			<option value="Hiiu">Hiiu</option> 
 		</select>
 		</tr>
-		<tr>
+		<tr><th>Partei</th> 
 		<select id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -43,18 +38,18 @@
     		<option value="Pluto">Pluto</option>
 		</select>
 		</tr>
-		<tr>
+		<tr><th>Lisa</th>
 		<select id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
 		</select>
 		</tr>
+		<tr>
+		<button onclick="statsRetrival()">OK</button>
+		</tr>
 		</table>		
 		
 	<br>
-	<p id="result"></p>	
-	<script>
-	statsRetrival();
-	</script>	
+	<p id="result"></p>			
 	</div>
 @stop
