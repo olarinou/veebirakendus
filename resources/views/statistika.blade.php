@@ -50,6 +50,6 @@
 		</table>		
 		
 	<br>
-	<p id="result"></p>			
+	<div id="result"><b>test</b></div>		
 	</div>
 @stop

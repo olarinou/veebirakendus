@@ -18,7 +18,7 @@ function statsRetrival() {
                 document.getElementById("result").innerHTML = xmlhttp.responseText;
             }
         }		
-        xmlhttp.open("GET","/getuser?q="+22,true);
+        xmlhttp.open("GET","/data2/Harju/Merkuur/kandidaat",true);
         xmlhttp.send();
     }
 	
