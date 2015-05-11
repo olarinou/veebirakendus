@@ -195,6 +195,7 @@ public function data($opt)
 				}	
 			}
 		}
+		
 		else if($opt == "Riik"){
 			$query = $mysqli->query("SELECT k.erakond, k.piirkond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
 			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
@@ -222,6 +223,59 @@ public function data($opt)
 		flush();
 		sleep(1);
 	} 	
+
+public function data2($opt)
+	{		
+		
+		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+		
+		if($opt == "Kandidaat"){
+			$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, SUM(t.tulemus) as summa FROM kandidaadid as k
+			JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) GROUP BY k.kandidaadiID ORDER BY summa  DESC");
+	
+			if($query->num_rows != 0){		
+	
+			while($rows = $query->fetch_assoc()){ 
+				$kandid= $rows['kandidaadiID'] ;			
+				$nimi=$rows['nimi'];
+				$erakond=$rows['erakond'];
+				$piirkond=$rows['piirkond']; 
+				$tulemus=$rows['summa'];			
+					echo "{$nimi}\n";				
+					echo "{$erakond}\n";
+					echo "{$piirkond}\n";
+					echo "{$tulemus}\n";
+					echo "\n";			
+				}	
+			}
+		}
+		
+		else if($opt == "Riik"){
+			$query = $mysqli->query("SELECT k.erakond, k.piirkond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
+			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
+			GROUP BY k.erakond DESC ");
+	
+			if($query->num_rows != 0){		
+	
+			while($rows = $query->fetch_assoc()){ 							
+				$erakond=$rows['erakond'];				
+				$piirkond=$rows['piirkond']; 
+				$tulemus=$rows['Summa'];
+					echo "{$erakond}\n";
+					echo "{$piirkond}\n";
+					echo "{$tulemus}\n";
+					echo "\n";			
+				}	
+			}
+		}
+		
+		$time = date('r');
+		$mysqli->close();
+		
+		echo "Uuendatud: {$time}\n";		
+		echo "\n\n"; 						
+		
+	} 		
 	
 public function addkandidaadid()
 	{

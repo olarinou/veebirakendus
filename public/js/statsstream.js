@@ -46,10 +46,10 @@ function responseAjax() {
         }
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("valik").innerHTML = xmlhttp.responseText;
+                document.getElementById("result").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","/data/"+str,true);
+        xmlhttp.open("GET","/data2/"+str,true);
         xmlhttp.send();
     }
 } 
