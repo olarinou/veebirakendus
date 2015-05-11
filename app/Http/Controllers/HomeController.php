@@ -176,8 +176,8 @@ public function data($opt)
 		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
 		
 		if($opt == "Kandidaat"){
-			$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
-			JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) GROUP BY t.tulemus DESC");
+			$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, SUM(t.tulemus) as summa FROM kandidaadid as k
+			JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID) GROUP BY k.kandidaadiID ORDER BY summa  DESC");
 	
 			if($query->num_rows != 0){		
 	
@@ -186,7 +186,7 @@ public function data($opt)
 				$nimi=$rows['nimi'];
 				$erakond=$rows['erakond'];
 				$piirkond=$rows['piirkond']; 
-				$tulemus=$rows['tulemus'];			
+				$tulemus=$rows['summa'];			
 					echo "data:	{$nimi}\n";				
 					echo "data:	{$erakond}\n";
 					echo "data:	{$piirkond}\n";
