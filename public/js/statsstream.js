@@ -23,7 +23,8 @@ function responseAjax() {
      if(myRequest.readyState == 4) {
         if(myRequest.status == 200) {
             result = myRequest.responseText;
-            document.getElementById("result").innerHTML = "test";
+            alert(result);
+            alert("we made it");
         } else {
             alert( " An error has occurred: " + myRequest.statusText);
         }
