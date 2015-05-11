@@ -33,7 +33,7 @@ function responseAjax() {
   }
   
  function statsRetrival() {
-    
+    document.getElementById("result").innerText = "test";	
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
