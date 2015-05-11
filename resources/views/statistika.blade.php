@@ -25,7 +25,7 @@
 		</select>
 		</tr>
 		<tr><th>Partei</th> 
-		<select id="partei">
+		<select id="partei" onchange="statsRetrival()">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
     		<option value="Veenus">Veenus</option>
