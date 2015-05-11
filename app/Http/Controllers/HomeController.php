@@ -292,10 +292,10 @@ public function data2($a, $b, $c)
 			}			
 		}
 		
-		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
-		$query = $mysqli->query($str);	
+		$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');		
 		if($lisa == "kandidaat")
-		{			
+		{	
+			$query = $mysqli->query($str);	
 			if($query->num_rows != 0){		
 	
 			while($rows = $query->fetch_assoc()){ 							
@@ -311,9 +311,10 @@ public function data2($a, $b, $c)
 				}	
 			}
 		}
-		
+		echo $str;
 		else
 		{
+			$query = $mysqli->query
 			if($query->num_rows != 0){		
 	
 			while($rows = $query->fetch_assoc()){				
