@@ -226,9 +226,12 @@ public function data($opt)
 
 public function data2($a, $b, $c)
 	{		
-		$a->ala;
-		$b->partei;
-		$c->lisa;
+		$ala = "";
+		$partei = "";
+		$lisa = "";
+		$ala=$a;
+		$partei=$b;
+		$lisa=$c;
 		$str = "";
 		if($lisa == "kandidaat")
 		{
