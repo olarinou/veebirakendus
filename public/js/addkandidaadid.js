@@ -1,6 +1,6 @@
 
 function formValidation() {
-	var controlReg = /^[azAZÄÜÕÕöäüõó' ]*$/;
+	var controlReg = /^[a-zA-ZÄÜÕÕöäüõó' ]*$/;
 	var whiteReg = /^\s+$/;
 	var nimi = document.getElementById("nimi").value;
 	var erakond = document.getElementById("erakond").value;
