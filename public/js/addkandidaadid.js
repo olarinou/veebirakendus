@@ -1,5 +1,5 @@
 
-function formValidation() 
+function formValidation() {
 	var controlReg = /^[a-zA-ZÄÜÕÕöäüõó' ]*$/;
 	var whiteReg = /^\s+$/;
 	var nimi = document.getElementById("nimi").value;
