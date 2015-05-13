@@ -8,9 +8,7 @@
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
-    		<option value="Lääne-Viru">Lääne-Viru</option>
-   			<option value="Ida-Viru">Ida-Viru</option> 
-			<option value="Lääne">Lääne</option>
+    		<option value="Lääne">Lääne</option>
 			<option value="Rapla">Rapla</option>
 			<option value="Järva">Järva</option> 
 			<option value="Jõgeva">Jõgeva</option>
