@@ -18,6 +18,9 @@ function formValidation() {
 	} else if (!controlReg.test(erakond)) {
 		alert("Erakond sisaldab lubamatuid tähemärke");
 		return false;
+	} else if (!controlReg.test(piirkond)) {
+		alert("Piirkond sisaldab lubamatuid tähemärke");
+		return false;
 
 	} else {
 
