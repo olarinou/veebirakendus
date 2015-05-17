@@ -2,7 +2,7 @@
 
 $mysqli = NEW MySQLi('localhost','root','Admin123','vv_db');
 
-$resultSet = $mysqli->query("SELECT * FROM kandidaadid");
+$resultSet = $mysqli->query("SELECT * FROM kandidaadid ORDER BY erakond, piirkond, nimi");
 if($resultSet->num_rows != 0){
 	while($rows = $resultSet->fetch_assoc())
 	{
