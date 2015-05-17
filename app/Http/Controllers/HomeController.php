@@ -132,7 +132,8 @@ public function tyhista()
 			}
 			else
 			{
-				$msg = "Hääl antud kandidaadile {$knimi}, tühista hääl?";
+				$msg = "Hääl antud kandidaadile {$knimi} <br> 
+				{!!HTML::link('/tyhista','tühista hääl?',['class'=>'btn btn-default'])!!}";
 			}	
 		return view('tyhistahaal')->with('msg', $msg);		
 		}
@@ -140,7 +141,39 @@ public function tyhista()
 		{
 			user();
 		}	
-    }		
+    }
+
+public function tyhista()
+    {
+        if(Auth::check())
+		{
+			/*$userID = Auth::user()->userID;
+			$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+			$query = $mysqli->query("SELECT u.tulemusID, k.nimi FROM users AS u 
+			JOIN tulemused AS t ON ( t.tulemusID = u.tulemusID ) 
+			JOIN kandidaadid AS k ON ( t.kandidaadiID = k.kandidaadiID ) 
+			WHERE u.userID ={$userID}");
+			$rows = $query->fetch_assoc();
+			$tulemus= $rows['tulemusID']; 
+			$knimi= $rows['nimi']; 
+			$mysqli->close();
+			if($tulemus==NULL) 
+			{
+				$msg = "Enne tühistamist võiks ikka hääletada :)";
+			}
+			else
+			{
+				$msg = "Hääl antud kandidaadile {$knimi} <br> 
+				{!!HTML::link('/tyhista','tühista hääl?',['class'=>'btn btn-default'])!!}";
+			}*/
+		$msg = "WIP";		
+		return view('tyhistahaal')->with('msg', $msg);		
+		}
+		else
+		{
+			user();
+		}	
+    }	
 	
 public function postotsing()
     {	
