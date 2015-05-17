@@ -280,7 +280,7 @@ public function data($opt)
 					echo "data:	{$erakond}<br>\n";
 					echo "data:	{$piirkond}<br>\n";
 					echo "data:	{$tulemus}<br>\n";
-					echo "data:	 <br><br>\n";			
+					echo "data:	 <br>\n";			
 				}	
 			}
 		}
