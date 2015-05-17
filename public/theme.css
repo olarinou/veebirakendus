@@ -48,7 +48,12 @@ body {
 }
 
 .container>.container p.Mars{
-    
+    margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #FFA2B2;
+	background-image: url("/img/mars.png");
+	background-repeat: no-repeat;
+	background-position:left center;
 }
 
 .container>.container p.Jupiter{
