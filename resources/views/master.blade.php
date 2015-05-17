@@ -24,6 +24,7 @@
 	<div class="footer">
 		<div class="container">
   		<p>Veebivalimised on loodud aine Veebirakenduste loomine korras</p>
+		<a href="http://katolilly.tumblr.com/post/109805392949/">Kasutatud planeedipiltide allikas.</a>
 		</div>
 	</div>
 </body>
