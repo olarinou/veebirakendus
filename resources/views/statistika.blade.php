@@ -46,10 +46,8 @@
 			<option value="nokandidaat">Peida kandidaadid</option>    		
 		</select>
 		</tr>
-		<tr>
-		<div class="text-center">
-		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)'],['class'=>'btn btn-default'])!!}	
-		</div>	
+		<tr>		
+		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)','class'=>'btn btn-default'])!!}		
 		</tr>
 		</table>		
 		
