@@ -143,7 +143,7 @@ public function tyhista()
 		}	
     }
 
-public function tyhista()
+public function tyhistaPost()
     {
         if(Auth::check())
 		{
