@@ -132,12 +132,12 @@ public function tyhista()
 			}
 			else
 			{
-				$msg = "Hääl antud kandidaadile {$knimi} <br> 
-				<div class='text-center'>	
+				$msg = "Hääl antud kandidaadile {$knimi} <br>
+					
 				<form method='post' action='/tyhista'>				
 				<button class ='btn btn-default' type='submit'>tühista hääl?</button>
 				</form>
-				</div>";
+				";
 			}	
 		return view('tyhistahaal')->with('msg', $msg);		
 		}
