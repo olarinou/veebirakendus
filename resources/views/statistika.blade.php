@@ -3,10 +3,10 @@
 @section('main')
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
-    <h3 class="heading">Häälte jagunemine:</h3>
+    <h3 class="heading">Häälte jagunemine</h3>
 	<table>			
 		<tr>	
-		{!! Form::label('a1','Ala:',['class'=>'col-sm-3 control-label']) !!}	
+		{!! Form::label('a1','Ala',['class'=>'col-sm-3 control-label']) !!}	
 		<select class ="form-control" id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
@@ -25,7 +25,7 @@
 		</select>
 		</tr>
 		<tr>
-		<b> Partei: </b>		 
+		{!! Form::label('a2','Partei',['class'=>'col-sm-3 control-label']) !!}		 
 		<select class ="form-control" id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -40,14 +40,16 @@
 		</select>
 		</tr>
 		<tr>
-		<b> Lisa: </b>		
+		{!! Form::label('a3','Lisa',['class'=>'col-sm-3 control-label']) !!}		
 		<select class ="form-control" id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
 		</select>
 		</tr>
-		<tr>		
-		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)','class'=>'btn btn-default'])!!}		
+		<tr>	
+		<div class="text-center">
+		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)','class'=>'btn btn-default'])!!}	
+		</div>
 		</tr>			
 		</table>		
 		
