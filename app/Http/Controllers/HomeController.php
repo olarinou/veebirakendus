@@ -108,7 +108,7 @@ public function haaletus()
 		}
 		else
 		{
-			user();
+			return redirect()->route('user');
 		}	
     }	
 	
@@ -141,7 +141,7 @@ public function tyhista()
 		}
 		else
 		{
-			user();
+			return redirect()->route('user');
 		}	
     }
 
@@ -175,7 +175,7 @@ public function tyhistaPost()
 		}
 		else
 		{
-			user();
+			return redirect()->route('user');
 		}	
     }	
 	
