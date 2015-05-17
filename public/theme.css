@@ -25,40 +25,41 @@ body {
         word-wrap: normal;
 }
 
-.container>.container p.Merkuur{
-    background-image: url("/img/merkuur.png");
+.container>.container Merkuur{   
+	background-color: #CCCCCC;
+	background-image: url("/img/merkuur.png");
 	background-repeat: no-repeat;		
 }
 
-.container>.container p.Veenus{
+.container>.container pla.Veenus{
        
 }
 
-.container>.container p.Maa{
+.container>.container pla.Maa{
        
 }
 
-.container>.container p.Mars{
+.container>.container pla.Mars{
     
 }
 
-.container>.container p.Jupiter{
+.container>.container pla.Jupiter{
     
 }
 
-.container>.container p.Saturn{
+.container>.container pla.Saturn{
     
 }
 
-.container>.container p.Uraan{
+.container>.container pla.Uraan{
     
 }
 
-.container>.container p.Neptuun{
+.container>.container pla.Neptuun{
    
 }
 
-.container>.container p.Pluuto{
+.container>.container pla.Pluuto{
     
 }
 
