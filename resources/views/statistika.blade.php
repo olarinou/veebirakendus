@@ -7,13 +7,7 @@
 	<table style="width:100%">		
 		<tr>
 		{!! Form::label('ala1','Ala:',['class'=>'col-sm-3 control-label']) !!}
-		{!! Form::select('ala', [
-		'Riik' => 'Riik',
-		'Harju' => 'Harju',
-		'Lääne' => 'Lääne'], null, ['id'=>'ala'] 
-		) !!}
-		
-		<select id="ala2">			
+		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
     		<option value="Lääne">Lääne</option>
@@ -30,7 +24,8 @@
 			<option value="Hiiu">Hiiu</option> 
 		</select>
 		</tr>
-		<tr> 
+		<tr>
+		{!! Form::label('partei1','Partei:',['class'=>'col-sm-3 control-label']) !!}		 
 		<select id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -45,6 +40,7 @@
 		</select>
 		</tr>
 		<tr>
+		{!! Form::label('lisa1','Lisa:',['class'=>'col-sm-3 control-label']) !!}		
 		<select id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
