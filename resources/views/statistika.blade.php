@@ -4,10 +4,10 @@
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
     <h3 class="heading">Häälte jagunemine:</h3>
-	<table>			
+	<table class="form-control">			
 		<tr>	
 		<b> Ala: </b>		
-		<select class ="form-control" id="ala">			
+		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
     		<option value="Lääne">Lääne</option>
