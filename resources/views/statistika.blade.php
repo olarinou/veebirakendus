@@ -7,6 +7,7 @@
 	<table style="width:100%">		
 		<tr>
 		{!! Form::label('ala1','Ala:') !!}
+		<br>
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
