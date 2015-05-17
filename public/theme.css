@@ -8,6 +8,11 @@ body {
 	flex-direction:column;
 }
 
+.container>.container>.col-md-8>.col-md-offset-2>.form-content table{
+	width: 100%;
+	padding: auto;
+	border: 1px solid green;	
+}
 
 .container>.container {
 	overflow-y: auto;

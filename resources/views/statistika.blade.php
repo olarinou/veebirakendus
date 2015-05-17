@@ -4,8 +4,7 @@
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
     <h3 class="heading">Häälte jagunemine:</h3>
-	<table>	
-		<p>
+	<table>			
 		<tr>	
 		<b> Ala: </b>		
 		<select id="ala">			
@@ -47,10 +46,9 @@
 			<option value="nokandidaat">Peida kandidaadid</option>    		
 		</select>
 		</tr>
-		<tr align="right">		
+		<tr>		
 		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)','class'=>'btn btn-default'])!!}		
-		</tr>
-		</p>	
+		</tr>			
 		</table>		
 		
 	<br>
