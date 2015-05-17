@@ -56,7 +56,12 @@ body {
 }
 
 .container>.container p.Saturn{
-    
+    margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #FFCCCC;
+	background-image: url("/img/saturn.png");
+	background-repeat: no-repeat;
+	background-position:left center;
 }
 
 .container>.container p.Uraan{
