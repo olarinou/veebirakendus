@@ -19,15 +19,16 @@ public function displaychart()
 	{
 	$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
 		
-	$lava = new Lavacharts();
-	$infoTable = $lava->DataTable();
-	$infoTable->addStringColumn('Piirkond')
-			->addStringColumn('Kandidaat') 
-            ->addStringColumn('Erakond') 
-            ->addNumberColumn('Hääled');	
+	$infoTable = Lava::DataTable();
+	$infoTable->addStringColumn('???')			
+            ->addNumberColumn('Hääled')
+			->addRow(array('test1', 5))
+			->addRow(array('test2', 2))
+			->addRow(array('test3', 4))
+			->addRow(array('test4', 89));;	
 	
 	//		 	
-	$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
+	/*$query = $mysqli->query("SELECT k.kandidaadiID, k.nimi, k.erakond, k.piirkond, t.tulemus FROM kandidaadid as k
 	JOIN tulemused as t ON (k.kandidaadiID = t.kandidaadiID)");
 	
 	if($query->num_rows != 0){		
@@ -46,14 +47,27 @@ public function displaychart()
 	} 	
 	$mysqli->close();	
 	//	
-	
-	$chart = $lava->PieChart('Info')
+	*/
+	$chart = Lava::PieChart('Info')
                     ->setOptions(array(
                         'datatable' => $infoTable,
-                        'title' => 'Statistika'
-                     ));	
+                        'title' => 'Statistika',
+						'is3D' => true,
+						'slices' => array(
+                        $lava->Slice(array(
+                          'offset' => 0.2
+                        )),
+                        $lava->Slice(array(
+                          'offset' => 0.25
+                        )),
+                        $lava->Slice(array(
+                          'offset' => 0.3
+                        ))
+                      )
+                  ));	
 	
-	return view( 'lavaphp', array('lava'=>$lava));
+	echo '<div id="chart-div"></div>';
+	echo Lava::render('PieChart', 'IMDB', 'chart-div');
 	}
 
 }
