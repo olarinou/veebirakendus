@@ -93,10 +93,9 @@ public function haaletus()
 		{
 			$userID = Auth::user()->userID;
 			$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
-			$query = $mysqli->query("SELECT u.tulemusID, k.nimi  FROM users as u JOIN  tulemused as t ON (t.tulemusID=u.tulemusID) JOIN kandidaadid as k ON (t.kandidaadiID=k.kandidaadiID) WHERE u.userID = {$userID}");
-			$rows = $query->fetch_assoc();
-			$tulemus= $rows['tulemusID']; 
-			$knimi= $rows['nimi']; 
+			$query = $mysqli->query("SELECT u.tulemusID FROM users as u WHERE u.userID = {$userID}");
+			$row = $query->fetch_assoc();
+			$tulemus= $row['tulemusID']; 
 			$mysqli->close();
 			if($tulemus==NULL) 
 			{
@@ -104,7 +103,7 @@ public function haaletus()
 			}
 			else
 			{
-				return view('tyhistahaal')->with('knimi', $knimi);
+				return redirect('/tyhista');
 			}			
 		}
 		else
@@ -112,6 +111,36 @@ public function haaletus()
 			user();
 		}	
     }	
+	
+public function tyhista()
+    {
+        if(Auth::check())
+		{
+			$userID = Auth::user()->userID;
+			$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+			$query = $mysqli->query("SELECT u.tulemusID, k.nimi FROM users AS u 
+			JOIN tulemused AS t ON ( t.tulemusID = u.tulemusID ) 
+			JOIN kandidaadid AS k ON ( t.kandidaadiID = k.kandidaadiID ) 
+			WHERE u.userID ={$userID}");
+			$rows = $query->fetch_assoc();
+			$tulemus= $rows['tulemusID']; 
+			$knimi= $rows['nimi']; 
+			$mysqli->close();
+			if($tulemus==NULL) 
+			{
+				$msg = "Enne tühistamist võiks ikka hääletada :)";
+			}
+			else
+			{
+				$msg = "Hääl antud kandidaadile {$knimi}, tühista hääl?";
+			}	
+		return view('/tyhista')->with('msg', $msg);		
+		}
+		else
+		{
+			user();
+		}	
+    }		
 	
 public function postotsing()
     {	
