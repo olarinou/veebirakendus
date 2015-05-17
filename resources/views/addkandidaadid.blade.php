@@ -3,7 +3,7 @@
 @section('main')
     <div class="container">	
 			<div class="col-md-8 col-md-offset-2 form-content">
-
+			<h3 class="heading">Kandidaadi lisamine</h3>
 			<form id="kandidaadid" onSubmit="return formValidation(this.form) " action="addkandidaadid" method="post">
 				<div class="form-group">
 			        <label for="nimi">Nimi:</label>
