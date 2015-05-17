@@ -472,15 +472,25 @@ public function postaddkandidaadid(AddRequest $request)
 			$nimi = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['nimi'])));
 			$erakond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['erakond'])));
 			$piirkond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['piirkond'])));
- 
-			// attempt insert query execution
-			$sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
-			if(mysqli_query($link, $sql)){
-				return view("kandidaatkinnitatud");
-			} else{
-				echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+			//kontrolli olemasolu
+			$str="SELECT nimi FROM kandidaadid WHERE (nimi='$nimi',erakond='$erakond',piirkond='$piirkond')";
+			$query = $link->query($str);
+			if($query->num_rows = 0)
+			{
+				// attempt insert query execution
+				$sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
+				if(mysqli_query($link, $sql)){
+					return view("kandidaatkinnitatud");
+				} else{
+					echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+				}
 			}
- 
+			else
+			{
+				$msg = "Sellise nime, erakonna ja piirkonna kombinatsiooniga kandidaat juba eksisteerib.";
+				return view("tyhistahaal")->with('msg', $msg);
+			}
+			
 			// close connection
 			mysqli_close($link);										
 		}
