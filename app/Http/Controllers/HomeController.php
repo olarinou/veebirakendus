@@ -475,24 +475,27 @@ public function postaddkandidaadid(AddRequest $request)
 			//kontrolli olemasolu
 			$str="SELECT nimi FROM kandidaadid WHERE (nimi='$nimi',erakond='$erakond',piirkond='$piirkond')";
 			$query = $link->query($str);
-			if($query->num_rows == 0)
+			if($query->num_rows != 0)
+			{
+				mysqli_close($link);
+				$msg = "Sellise nime, erakonna ja piirkonna kombinatsiooniga kandidaat juba eksisteerib.";
+				return view("tyhistahaal")->with('msg', $msg);
+			}
+			else
 			{
 				// attempt insert query execution
 				$sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
 				if(mysqli_query($link, $sql)){
-					return view("kandidaatkinnitatud");
+					mysqli_close($link);
+					return view("kandidaatkinnitatud");					
 				} else{
-					echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-				}
-			}
-			else
-			{
-				$msg = "Sellise nime, erakonna ja piirkonna kombinatsiooniga kandidaat juba eksisteerib.";
-				return view("tyhistahaal")->with('msg', $msg);
+					mysqli_close($link);
+					$msg = "ERROR: Could not able to execute $sql. " . mysqli_error($link);					
+					return view("tyhistahaal")->with('msg', $msg);
+				}				
 			}
 			
-			// close connection
-			mysqli_close($link);										
+			// close connection												
 		}
 		else
 		{
