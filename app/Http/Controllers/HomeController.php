@@ -89,7 +89,27 @@ public function otsing()
 
 public function haaletus()
     {
-        return view('haaletus');
+        if(Auth::check())
+		{
+			$userID = Auth::user()->userID;
+			$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
+			$query = $mysqli->query("SELECT u.tulemusID FROM users as u WHERE u.userID = {$userID}");
+			$row = $query->fetch_assoc();
+			$tulemus= $row['tulemusID']; 
+			$mysqli->close();
+			if($tulemus==NULL) 
+			{
+				return view('haaletus');
+			}
+			else
+			{
+				return view('tyhistahaal');
+			}			
+		}
+		else
+		{
+			user();
+		}	
     }	
 	
 public function postotsing()
@@ -197,26 +217,7 @@ public function data($opt)
 				}	
 			}
 		}
-		
-		else if($opt == "Riik"){
-			$query = $mysqli->query("SELECT k.erakond, k.piirkond, SUM( t.tulemus ) AS Summa FROM kandidaadid AS k
-			JOIN tulemused AS t ON ( k.kandidaadiID = t.kandidaadiID ) 
-			GROUP BY k.erakond DESC ");
-	
-			if($query->num_rows != 0){		
-	
-			while($rows = $query->fetch_assoc()){ 							
-				$erakond=$rows['erakond'];				
-				$piirkond=$rows['piirkond']; 
-				$tulemus=$rows['Summa'];
-					echo "data:	{$erakond} \n";
-					echo "data:	{$piirkond} \n";
-					echo "data:	{$tulemus} \n";
-					echo "data:	 IbrRI\n";			
-				}	
-			}
-		}
-		
+				
 		$time = date('r');
 		$mysqli->close();
 		
