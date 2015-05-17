@@ -47,12 +47,14 @@
 		</select>
 		</tr>
 		<tr>
-		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)'],['class'=>'btn btn-default'])!!}
-		<button onclick="statsRetrival(22)">OK</button>
+		<div class="text-center">
+		{!!Form::submit('OK',['class'=>'btn btn-default'],['onClick'=> 'statsRetrival(22)'])!!}	
+		</div>	
 		</tr>
 		</table>		
 		
 	<br>
 	<div id="result"><b></b></div>		
+	</div>
 	</div>
 @stop
