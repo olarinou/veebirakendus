@@ -137,7 +137,7 @@ public function tyhista()
 				<button type='submit'>tühista hääl?</button>
 				</form>";
 			}	
-		return view('tyhistahaal')->with('msg', $msg)		
+		return view('tyhistahaal')->with('msg', $msg);		
 		}
 		else
 		{
@@ -168,8 +168,8 @@ public function tyhistaPost()
 				$msg = "Hääl antud kandidaadile {$knimi} <br> 
 				{!!HTML::link('/tyhista','tühista hääl?',['class'=>'btn btn-default'])!!}";
 			}*/
-		$msg = "WIP";		
-		return view('tyhistahaal')->with('msg', $msg)		
+			$msg = "WIP";		
+			return view('tyhistahaal')->with('msg', $msg);		
 		}
 		else
 		{
