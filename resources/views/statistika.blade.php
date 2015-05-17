@@ -4,10 +4,10 @@
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
     <h3 class="heading">Häälte jagunemine:</h3>
-	<table class="form-control">			
+	<table>			
 		<tr>	
-		<b> Ala: </b>		
-		<select id="ala">			
+		{!! Form::label('a1','Ala:',['class'=>'col-sm-3 control-label']) !!}	
+		<select class ="form-control" id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
     		<option value="Lääne">Lääne</option>
@@ -26,7 +26,7 @@
 		</tr>
 		<tr>
 		<b> Partei: </b>		 
-		<select id="partei">
+		<select class ="form-control" id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
     		<option value="Veenus">Veenus</option>
@@ -41,7 +41,7 @@
 		</tr>
 		<tr>
 		<b> Lisa: </b>		
-		<select id="lisa">
+		<select class ="form-control" id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
 		</select>
