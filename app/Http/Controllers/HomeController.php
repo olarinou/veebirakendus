@@ -133,8 +133,8 @@ public function tyhista()
 			else
 			{
 				$msg = "Hääl antud kandidaadile {$knimi} <br> 
-				<form method="post" action="/tyhista">
-				<button type="submit">tühista hääl?</button>
+				<form method='post' action='/tyhista'>
+				<button type='submit'>tühista hääl?</button>
 				</form>";
 			}	
 		return view('tyhistahaal')->with('msg', $msg);		
