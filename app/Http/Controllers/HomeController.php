@@ -245,7 +245,7 @@ public function displaychart()
                         'title' => 'Statistika'
                      ));	
 	
-	return view( 'tyhistahaal', array('msg'=>$lava));
+	return view( 'lavaphp', array('lava'=>$lava));
 	}
 
 
