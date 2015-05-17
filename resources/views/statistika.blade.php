@@ -10,7 +10,7 @@
 		{{ Form::select('ala', [
 		'Riik' => 'Riik',
 		'Harju' => 'Harju',
-		'Lääne' => 'Lääne'], null, ['class'=>'col-sm-3 control-select'], ['id'=>'ala'] 
+		'Lääne' => 'Lääne'], null, ['id'=>'ala'] 
 		) }}
 		<select id="ala2">			
 			<option value="Riik">Riik</option>
