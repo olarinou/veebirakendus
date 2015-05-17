@@ -31,6 +31,6 @@ Route::get('/data/{opt}', 'HomeController@data');
 Route::get('/data2/{ala}/{partei}/{lisa}', 'HomeController@data2');
 Route::get('/tyhista', 'HomeController@tyhista');
 Route::post('/tyhista', 'HomeController@tyhistaPost');
-Route::match(['get', 'post'],'/pietest','HomeController@displaychart');
+Route::match(['get', 'post'],'/pietest','PieController@displaychart');
  
 Route::controller('/','Auth\AuthController');
