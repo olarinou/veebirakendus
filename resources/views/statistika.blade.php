@@ -3,10 +3,11 @@
 @section('main')
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
-    <h3 class="heading">Häälte jagunemine:</h3>	
-	<table style="width:100%">		
+    <h3 class="heading">Häälte jagunemine:</h3>
+	<table>		
+	<div class="col-sm-8">
 		<tr>	
-		<b>Ala: </b>
+		<b> Ala: </b>
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
@@ -25,7 +26,7 @@
 		</select>
 		</tr>
 		<tr>
-		<b>Partei: </b>		 
+		<b> Partei: </b>		 
 		<select id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -40,7 +41,7 @@
 		</select>
 		</tr>
 		<tr>
-		<b>Lisa: </b>		
+		<b> Lisa: </b>		
 		<select id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
@@ -49,6 +50,7 @@
 		<tr>		
 		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)','class'=>'btn btn-default'])!!}		
 		</tr>
+		</div>
 		</table>		
 		
 	<br>
