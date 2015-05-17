@@ -473,7 +473,7 @@ public function postaddkandidaadid(AddRequest $request)
 			$erakond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['erakond'])));
 			$piirkond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['piirkond'])));
 			//kontrolli olemasolu
-			$str="SELECT nimi FROM kandidaadid WHERE nimi='$nimi',erakond='$erakond',piirkond='$piirkond'";
+			$str="SELECT nimi FROM kandidaadid WHERE nimi='$nimi' AND erakond='$erakond' AND piirkond='$piirkond'";
 			$query = $link->query($str);
 			if($query->num_rows != 0)
 			{
@@ -488,9 +488,9 @@ public function postaddkandidaadid(AddRequest $request)
 				if(mysqli_query($link, $sql)){
 					mysqli_close($link);
 					return view("kandidaatkinnitatud");					
-				} else{
-					mysqli_close($link);
-					$msg = "ERROR: Could not able to execute $sql. " . mysqli_error($link);					
+				} else{			
+					$msg = "ERROR: Could not able to execute $sql. " . mysqli_error($link);	
+					mysqli_close($link);	
 					return view("tyhistahaal")->with('msg', $msg);
 				}				
 			}
