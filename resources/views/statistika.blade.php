@@ -4,8 +4,8 @@
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
     <h3 class="heading">Häälte jagunemine:</h3>
-	<table>
-		<div class="col-sm-8">
+	<table>	
+		<p>
 		<tr>	
 		<b> Ala: </b>		
 		<select id="ala">			
@@ -50,11 +50,10 @@
 		<tr>		
 		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)','class'=>'btn btn-default'])!!}		
 		</tr>
-		</div>
+		</p>	
 		</table>		
 		
 	<br>
 	<div id="result"><b></b></div>		
-	</div>
-	</div>
+	</div>	
 @stop
