@@ -37,14 +37,19 @@ body {
 .container>.container p.Veenus{
     margin:0px;
 	padding:3px 3px 3px 75px;
-	background-color: #FFCC99;
+	background-color: #EFD9B1;
 	background-image: url("/img/veenus.png");
 	background-repeat: no-repeat;
 	background-position:left center;   
 }
 
 .container>.container p.Maa{
-    margin-bottom:0;   
+    margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #AcD890;
+	background-image: url("/img/maa.png");
+	background-repeat: no-repeat;
+	background-position:left center; 
 }
 
 .container>.container p.Mars{
@@ -57,7 +62,12 @@ body {
 }
 
 .container>.container p.Jupiter{
-    
+    margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #FFCC99;
+	background-image: url("/img/jupiter.png");
+	background-repeat: no-repeat;
+	background-position:left center;
 }
 
 .container>.container p.Saturn{
@@ -88,7 +98,12 @@ body {
 }
 
 .container>.container p.Pluuto{
-    
+    margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #DDD8E5;
+	background-image: url("/img/pluuto.png");
+	background-repeat: no-repeat;
+	background-position:left center;
 }
 
 h1 {
