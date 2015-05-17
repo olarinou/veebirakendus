@@ -475,7 +475,7 @@ public function postaddkandidaadid(AddRequest $request)
 			//kontrolli olemasolu
 			$str="SELECT nimi FROM kandidaadid WHERE (nimi='$nimi',erakond='$erakond',piirkond='$piirkond')";
 			$query = $link->query($str);
-			if($query->num_rows = 0)
+			if($query->num_rows == 0)
 			{
 				// attempt insert query execution
 				$sql = "INSERT INTO kandidaadid (nimi, erakond, piirkond) VALUES ('$nimi', '$erakond', '$piirkond')";
