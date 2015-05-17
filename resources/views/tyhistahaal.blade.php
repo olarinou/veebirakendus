@@ -2,7 +2,7 @@
 @section('main')
 
 <div class="container">   
-    wip   
+    Oled hääletanud kandidaadi $knimi poolt. 
 </div>
 
 @stop
