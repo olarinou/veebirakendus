@@ -473,7 +473,7 @@ public function postaddkandidaadid(AddRequest $request)
 			$erakond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['erakond'])));
 			$piirkond = ucwords(strtolower(mysqli_real_escape_string($link, $_POST['piirkond'])));
 			//kontrolli olemasolu
-			$str="SELECT nimi FROM kandidaadid WHERE (nimi='$nimi',erakond='$erakond',piirkond='$piirkond')";
+			$str="SELECT nimi FROM kandidaadid WHERE nimi='$nimi',erakond='$erakond',piirkond='$piirkond'";
 			$query = $link->query($str);
 			if($query->num_rows != 0)
 			{
