@@ -343,6 +343,7 @@ public function data2($a, $b, $c)
 
 public function haaletusPost()
 	{
+	$userID = Auth::user()->userID;
 	$link = mysqli_connect("localhost", "root", "Admin123", "vv_db");
 	$msg="";
 	if($link === false){
@@ -356,9 +357,10 @@ public function haaletusPost()
 		$kandid = mysqli_real_escape_string($link, $_POST['valitu']);
 		//var_dump($kandid);
 		//die();
-		$sql = "INSERT INTO tulemused (kandidaadiID, tulemus) VALUES ('$kandid', '1')";
+		$sql = "INSERT INTO tulemused (kandidaadiID, tulemus) VALUES ('$kandid', '1'); 
+		UPDATE users SET tulemusID=LAST_INSERT_ID() WHERE userID=$userID";
 		
-		if(mysqli_query($link, $sql)){
+		if(mysqli_multi_query($link, $sql)){
     		//include ("addkandidaadid.php");
     		$msg= "Lisatud";
 		} else{
