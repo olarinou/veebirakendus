@@ -37,7 +37,7 @@ body {
 .container>.container p.Veenus{
     margin:0px;
 	padding:3px 3px 3px 75px;
-	background-color: #FF9966;
+	background-color: #FFCC99;
 	background-image: url("/img/veenus.png");
 	background-repeat: no-repeat;
 	background-position:left center;   
@@ -60,7 +60,12 @@ body {
 }
 
 .container>.container p.Uraan{
-    
+    margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #99CCFF;
+	background-image: url("/img/uraan.png");
+	background-repeat: no-repeat;
+	background-position:left center; 
 }
 
 .container>.container p.Neptuun{
