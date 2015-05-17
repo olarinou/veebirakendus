@@ -7,11 +7,12 @@
 	<table style="width:100%">		
 		<tr>
 		{!! Form::label('ala1','Ala:',['class'=>'col-sm-3 control-label']) !!}
-		{{ Form::select('ala', [
+		{!! Form::select('ala', [
 		'Riik' => 'Riik',
 		'Harju' => 'Harju',
 		'Lääne' => 'Lääne'], null, ['id'=>'ala'] 
-		) }}
+		) !!}
+		
 		<select id="ala2">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
