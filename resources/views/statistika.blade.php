@@ -6,7 +6,7 @@
     <h3 class="heading">Häälte jagunemine:</h3>	
 	<table style="width:100%">		
 		<tr>
-		{!! Form::label('ala1','Ala:',['class'=>'col-sm-3 control-label']) !!}
+		{!! Form::label('ala1','Ala:',['class'=>'col-sm-3 control-label']) 
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
@@ -23,6 +23,7 @@
 			<option value="Saare">Saare</option> 
 			<option value="Hiiu">Hiiu</option> 
 		</select>
+		!!}
 		</tr>
 		<tr>
 		{!! Form::label('partei1','Partei:',['class'=>'col-sm-3 control-label']) !!}		 
