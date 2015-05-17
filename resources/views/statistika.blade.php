@@ -3,7 +3,7 @@
 @section('main')
 	<div class="container">
 	<div class="col-md-8 col-md-offset-2 form-content">
-    <h3 class="heading">Häälte jagunemine</h3>
+    <h3 class="heading">Häälte jagunemise statistika</h3>
 	<table>			
 		<tr>	
 		{!! Form::label('a1','Ala',['class'=>'col-sm-3 control-label']) !!}	

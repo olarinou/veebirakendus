@@ -2,6 +2,7 @@
 <script src="js/addkandidaadid.js"></script>	 
 @section('main')
     <div class="container">	
+			<div class="col-md-8 col-md-offset-2 form-content">
 			<form id="kandidaadid" onSubmit="return formValidation(this.form) " action="addkandidaadid" method="post">
 				<div class="form-group">
 			        <label for="nimi">Nimi:</label>
@@ -41,5 +42,6 @@
 			    </div>
 			    <button type="submit" class="btn btn-default">Lisa</button>
 			</form>	
+			 </div>
 	</div> 
 @stop
