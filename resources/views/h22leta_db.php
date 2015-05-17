@@ -16,7 +16,7 @@ if($query->num_rows != 0){
 		Erakond: ' .$erakond. ' Piirkond: ' .$piirkond; 
 		echo ' <br><br>';
 		}	
-	echo '<br><p><input type="submit" name="voteSubmit" value="Vali kandidaat" /></p></form>';
+	echo '<br><p><input class="btn btn-default" type="submit" name="voteSubmit" value="Vali kandidaat" /></p></form>';
 	} 
 else { 
 echo "Pole ühtegi kandidaati";
