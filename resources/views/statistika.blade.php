@@ -5,9 +5,8 @@
 	<div class="col-md-8 col-md-offset-2 form-content">
     <h3 class="heading">Häälte jagunemine:</h3>	
 	<table style="width:100%">		
-		<tr>
-		{!! Form::label('ala1','Ala:') !!}
-		<br>
+		<tr>	
+		<b>Ala: </b>
 		<select id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
@@ -26,7 +25,7 @@
 		</select>
 		</tr>
 		<tr>
-		{!! Form::label('partei1','Partei:',['class'=>'col-sm-3 control-label']) !!}		 
+				 
 		<select id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -41,7 +40,7 @@
 		</select>
 		</tr>
 		<tr>
-		{!! Form::label('lisa1','Lisa:',['class'=>'col-sm-3 control-label']) !!}		
+				
 		<select id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
