@@ -24,9 +24,7 @@
 			    <div class="form-group">
 			        <label for="piirkond">Piirkond:</label>
 			        <select class="form-control" name="piirkond" id="piirkond" required>
-			        	<option>Harju maakond</option>
-    					<option>Lääne-Viru maakond</option>
-    					<option>Ida-Viru maakond</option>
+			        <option>Harju maakond</option>
    						<option>Lääne maakond</option>
    						<option>Rapla maakond</option>
     					<option>Järva maakond</option>
