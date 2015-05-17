@@ -133,7 +133,9 @@ public function tyhista()
 			else
 			{
 				$msg = "Hääl antud kandidaadile {$knimi} <br> 
-				{!!HTML::link('/tyhista','tühista hääl?',['class'=>'btn btn-default'])!!}";
+				<form method="post" action="/tyhista">
+				<button type="submit">tühista hääl?</button>
+				</form>";
 			}	
 		return view('tyhistahaal')->with('msg', $msg);		
 		}
