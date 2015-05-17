@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AddRequest;
 use Khill\Lavacharts\Lavacharts;
 
-class HomeController extends Controller {
+class PieController extends Controller {
 
     /**
  * Show the application home page to the user.
