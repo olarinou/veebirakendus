@@ -7,7 +7,7 @@
 	<table>			
 		<tr>	
 		<b> Ala: </b>		
-		<select id="ala">			
+		<select class ="list-group" id="ala">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
     		<option value="Lääne">Lääne</option>
