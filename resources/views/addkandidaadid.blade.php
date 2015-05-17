@@ -3,6 +3,7 @@
 @section('main')
     <div class="container">	
 			<div class="col-md-8 col-md-offset-2 form-content">
+
 			<form id="kandidaadid" onSubmit="return formValidation(this.form) " action="addkandidaadid" method="post">
 				<div class="form-group">
 			        <label for="nimi">Nimi:</label>
@@ -40,7 +41,9 @@
     					<option>Hiiu maakond</option>
   					</select>
 			    </div>
+				<div class='text-center'>
 			    <button type="submit" class="btn btn-default">Lisa</button>
+				</div>
 			</form>	
 			 </div>
 	</div> 
