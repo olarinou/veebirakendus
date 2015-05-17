@@ -149,26 +149,28 @@ public function tyhistaPost()
     {
         if(Auth::check())
 		{
-			/*$userID = Auth::user()->userID;
-			$mysqli = mysqli_connect('localhost','root','Admin123','vv_db');
-			$query = $mysqli->query("SELECT u.tulemusID, k.nimi FROM users AS u 
-			JOIN tulemused AS t ON ( t.tulemusID = u.tulemusID ) 
-			JOIN kandidaadid AS k ON ( t.kandidaadiID = k.kandidaadiID ) 
-			WHERE u.userID ={$userID}");
-			$rows = $query->fetch_assoc();
-			$tulemus= $rows['tulemusID']; 
-			$knimi= $rows['nimi']; 
-			$mysqli->close();
-			if($tulemus==NULL) 
-			{
-				$msg = "Enne tühistamist võiks ikka hääletada :)";
+			$userID = Auth::user()->userID;			
+			$link = mysqli_connect('localhost','root','Admin123','vv_db');	
+			$query = $link->query("SELECT u.tulemusID FROM users AS u WHERE u.userID ={$userID}");
+			$row = $query->fetch_assoc();
+			$tulemus= $row['tulemusID'];			
+			$sql="DELETE FROM tulemused WHERE tulemusID = $tulemus; UPDATE users SET tulemusID=NULL WHERE userID=$userID";
+			if(mysqli_multi_query($link, $sql))
+			{				
+				$msg = "Hääl tühistatud"; 	
 			}
 			else
 			{
-				$msg = "Hääl antud kandidaadile {$knimi} <br> 
-				{!!HTML::link('/tyhista','tühista hääl?',['class'=>'btn btn-default'])!!}";
-			}*/
-			$msg = "WIP";		
+				$msg= "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+			}				
+			 
+			
+			$query = $link->query("UPDATE u.tulemusID, k.nimi FROM users AS u 
+			JOIN tulemused AS t ON ( t.tulemusID = u.tulemusID ) 
+			JOIN kandidaadid AS k ON ( t.kandidaadiID = k.kandidaadiID ) 
+			WHERE u.userID ={$userID}");			 
+			
+			$link->close();						
 			return view('tyhistahaal')->with('msg', $msg);		
 		}
 		else
