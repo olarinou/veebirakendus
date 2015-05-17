@@ -25,6 +25,46 @@ body {
         word-wrap: normal;
 }
 
+.container>.container p.Merkuur{
+    border-style: solid;
+    border-width: 1px; 
+	background-color: #CCCCCC;
+	background-image: url("/img/merkuur.png");
+	background-repeat: no-repeat;		
+}
+
+.container>.container p.Veenus{
+       
+}
+
+.container>.container p.Maa{
+       
+}
+
+.container>.container p.Mars{
+    
+}
+
+.container>.container p.Jupiter{
+    
+}
+
+.container>.container p.Saturn{
+    
+}
+
+.container>.container p.Uraan{
+    
+}
+
+.container>.container p.Neptuun{
+   
+}
+
+.container>.container p.Pluuto{
+    
+}
+
 h1 {
     color: #00ff00;
 }

@@ -275,12 +275,13 @@ public function data($opt)
 				$nimi=$rows['nimi'];
 				$erakond=$rows['erakond'];
 				$piirkond=$rows['piirkond']; 
-				$tulemus=$rows['summa'];			
+				$tulemus=$rows['summa'];
+					echo "data: <p class='{$erakond}'>\n";
 					echo "data:	{$nimi}<br>\n";				
 					echo "data:	{$erakond}<br>\n";
 					echo "data:	{$piirkond}<br>\n";
 					echo "data:	{$tulemus}<br>\n";
-					echo "data:	 <br>\n";			
+					echo "data:	 <p>\n";			
 				}	
 			}
 		}
