@@ -5,7 +5,7 @@ use Session;
 use Socialize;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddRequest;
-use Khill\Lavacharts\Lavacharts;
+use Khill\Lavacharts\Lavacharts as Lava;
 
 class PieController extends Controller {
 
