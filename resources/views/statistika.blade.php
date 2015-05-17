@@ -2,10 +2,17 @@
 <script src="js/stats.js"></script>
 @section('main')
 	<div class="container">
-	Häälte jagunemine:
-		<table style="width:100%">		
+	<div class="col-md-8 col-md-offset-2 form-content">
+    <h3 class="heading">Häälte jagunemine:</h3>	
+	<table style="width:100%">		
 		<tr>
-		<select id="ala">			
+		{!! Form::label('ala1','Ala:',['class'=>'col-sm-3 control-label']) !!}
+		{{ Form::select('ala', [
+		'Riik' => 'Riik',
+		'Harju' => 'Harju',
+		'Lääne' => 'Lääne'], null, ['class'=>'col-sm-3 control-select'], ['id'=>'ala'] 
+		) }}
+		<select id="ala2">			
 			<option value="Riik">Riik</option>
     		<option value="Harju">Harju</option>
     		<option value="Lääne">Lääne</option>
