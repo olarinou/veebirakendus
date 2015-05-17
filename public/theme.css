@@ -30,7 +30,8 @@ body {
 	padding:3px 3px 3px 75px;
 	background-color: #CCCCCC;
 	background-image: url("/img/merkuur.png");
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	background-position:left center;	
 }
 
 .container>.container p.Veenus{
