@@ -26,10 +26,7 @@ body {
 }
 
 .container>.container p.Merkuur{
-    border-style: solid;
-    border-width: 1px; 
-	background-color: #CCCCCC;
-	background-image: url("/img/merkuur.png");
+    background-image: url("/img/merkuur.png");
 	background-repeat: no-repeat;		
 }
 
