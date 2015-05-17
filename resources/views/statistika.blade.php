@@ -25,7 +25,7 @@
 		</select>
 		</tr>
 		<tr>
-				 
+		<b>Partei: </b>		 
 		<select id="partei">
 			<option value="Kõik">Kõik</option>
 			<option value="Merkuur">Merkuur</option>
@@ -40,13 +40,14 @@
 		</select>
 		</tr>
 		<tr>
-				
+		<b>Lisa: </b>		
 		<select id="lisa">
 			<option value="kandidaat">Näita kandidaate</option>
 			<option value="nokandidaat">Peida kandidaadid</option>    		
 		</select>
 		</tr>
 		<tr>
+		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)'],['class'=>'btn btn-default'])!!}
 		<button onclick="statsRetrival(22)">OK</button>
 		</tr>
 		</table>		
