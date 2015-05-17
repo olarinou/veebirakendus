@@ -26,10 +26,10 @@ body {
 }
 
 .container>.container p.Merkuur{   
-	margin:0;
+	margin:0px;
+	padding:2px;
 	background-color: #CCCCCC;
-	background-image: url("/img/merkuur.png");
-	background-repeat: no-repeat;		
+	background-image: url("/img/merkuur.png");			
 }
 
 .container>.container p.Veenus{
