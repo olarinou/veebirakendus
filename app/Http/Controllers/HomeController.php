@@ -134,7 +134,7 @@ public function tyhista()
 			{
 				$msg = "Hääl antud kandidaadile {$knimi}, tühista hääl?";
 			}	
-		return view('/tyhista')->with('msg', $msg);		
+		return view('tyhistahaal')->with('msg', $msg);		
 		}
 		else
 		{

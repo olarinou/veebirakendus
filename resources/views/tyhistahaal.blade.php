@@ -2,7 +2,7 @@
 @section('main')
 
 <div class="container">   
-    $msg
+    @include(tyhistaphp);
 </div>
 
 @stop
