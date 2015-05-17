@@ -48,7 +48,7 @@
 		</tr>
 		<tr>
 		<div class="text-center">
-		{!!Form::submit('OK',['class'=>'btn btn-default'],['onClick'=> 'statsRetrival(22)'])!!}	
+		{!!Form::submit('OK',['onClick'=> 'statsRetrival(22)'],['class'=>'btn btn-default'])!!}	
 		</div>	
 		</tr>
 		</table>		
