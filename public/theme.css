@@ -62,14 +62,19 @@ body {
 .container>.container p.Uraan{
     margin:0px;
 	padding:3px 3px 3px 75px;
-	background-color: #99CCFF;
+	background-color: #CCFFFF;
 	background-image: url("/img/uraan.png");
 	background-repeat: no-repeat;
 	background-position:left center; 
 }
 
 .container>.container p.Neptuun{
-   
+	margin:0px;
+	padding:3px 3px 3px 75px;
+	background-color: #99CCFF;
+	background-image: url("/img/neptuun.png");
+	background-repeat: no-repeat;
+	background-position:left center; 
 }
 
 .container>.container p.Pluuto{
