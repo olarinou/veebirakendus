@@ -373,12 +373,13 @@ public function data2($a, $b, $c)
 				$nimi=$rows['nimi'];
 				$erakond=$rows['erakond'];
 				$piirkond=$rows['piirkond']; 
-				$tulemus=$rows['summa'];			
+				$tulemus=$rows['summa'];
+					echo "<p class='{$erakond}'>";
 					echo "{$nimi}<br>";				
 					echo "{$erakond}<br>";
 					echo "{$piirkond}<br>";
 					echo "{$tulemus}<br>";
-					echo "<br>";			
+					echo "</p>";				
 				}	
 			}
 		}		
@@ -392,11 +393,11 @@ public function data2($a, $b, $c)
 				$erakond=$rows['erakond'];
 				$piirkond=$rows['piirkond']; 
 				$tulemus=$rows['summa'];		
-								
+					echo "<p class='{$erakond}'>";			
 					echo "{$erakond}<br>";
 					echo "{$piirkond}<br>";
 					echo "{$tulemus}<br>";
-					echo "<br>";			
+					echo "</p>";			
 				}	
 			}
 		}
