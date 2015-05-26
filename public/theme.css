@@ -14,11 +14,11 @@ body {
 	right:0px;
 	height:auto;
 	position:relative;
+	min-height: 100vh;
 }
 
 .wrap>.container>.container {
 	flex: 1 1 auto;
-	height:100%;
 	padding:10px;
 	margin:10px;
 }
