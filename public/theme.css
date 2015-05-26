@@ -13,10 +13,9 @@ body {
 	overflow-x:hidden;
 	padding:10px;
 	bottom:50px;
-	top:auto;
 	flex:2;
 	height:auto;
-	position:absolute;
+	position:relative;
 	margin:10px;
 }
 
