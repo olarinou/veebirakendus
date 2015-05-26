@@ -10,7 +10,7 @@ body {
 	flex: 1 1 auto;	
 }
 
-.container>.container {
+.wrap>.container>.container {
 	height:100%;
 	padding:10px;
 	margin:10px;
