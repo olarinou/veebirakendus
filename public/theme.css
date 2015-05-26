@@ -1,9 +1,4 @@
 body {
-	height:100%;
-	top:0px;
-	bottom:0px;
-	left:0px;
-	right:0px;
 	padding:10px;
 	margin:10px;
 	background-color:  #FFFFFF;
@@ -13,11 +8,20 @@ body {
 }
 
 .wrap {
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	position:absolute;
+	height:100%;
+}
+
+.container {
 	position:relative;
 	height:auto;
 }
 
-.wrap>.container>.container {
+.container>.container {
 	overflow-y: auto;
 	overflow-x:hidden;
 	padding:10px;
