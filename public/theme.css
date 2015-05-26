@@ -5,12 +5,13 @@ body {
 	background-color:  #FFFFFF;
 	display:flex;
 	flex-direction:column;
-	height:100%;
+	min-height:100%;
 }
 
 .wrap {
-	height: auto;
-	position:relative;
+	top:0px;
+	bottom:0px;
+	position:absolute;
 }
 
 .container>.container {
@@ -19,7 +20,6 @@ body {
 	padding:10px;
 	margin:10px;
 	height:100%;
-	position:absolute;
 }
 
 .container>.container p{
@@ -129,7 +129,6 @@ h1 {
 
 .footer {
 	bottom:0;
-	position:absolute;
 	background-color: orange;
 	padding: 14px 10px;
 	margin: 10px 10px 0px 10px; 
