@@ -15,7 +15,7 @@ body {
 	bottom:50px;
 	flex:2;
 	height:auto;
-	position:relative;
+	position:absolute;
 	margin:10px;
 }
 
@@ -109,7 +109,7 @@ h1 {
 }
 
 .nav {
- position:absolute;
+ position:fixed;
  top:10px;
 flex:1;	
 }
