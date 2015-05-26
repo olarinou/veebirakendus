@@ -4,12 +4,10 @@ body {
 	flex-direction:column;
 	overflow-x:hidden;
 	overflow-y: auto;
-	height:auto;
 	
 }
 
 .wrap {
-	position:relative;
 	top:0px;
 	bottom:0px;
 	left:0px;
