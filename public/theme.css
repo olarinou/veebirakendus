@@ -16,6 +16,7 @@ body {
 
 .wrap>.container>.container {
 	flex: 1 1 auto;
+	align-content: stretch;
 	height:100%;
 	padding:10px;
 	margin:10px;
