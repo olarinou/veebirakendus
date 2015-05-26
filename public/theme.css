@@ -1,7 +1,7 @@
 body {
 	overflow:hidden;
 	padding:10px;
-	height:100%;
+	height:auto;
 	margin:10px;
 	background-color:  #FFFFFF;
 	display:flex;
@@ -15,6 +15,7 @@ body {
 	padding:10px;
 	position:absolute;
 	margin:10px;
+	height:100%
 }
 
 .container>.container p{
@@ -124,7 +125,7 @@ h1 {
 }
 
 .footer {
-	position:relative;
+	position:absolute;
 	bottom:0;
 	background-color: orange;
 	padding: 14px 10px;
