@@ -1,5 +1,5 @@
 <nav>
-	<div class="col-xs-12 col-sm-4 col-md-12 col-lg-12">						
+	<div class="col-xs-12 col-sm-7 col-md-12 col-lg-12">						
 	<ul class="text-center">
         	<li><a href="/">Avaleht</a></li>
           	<li><a href="/user">Logi sisse</a></li>
