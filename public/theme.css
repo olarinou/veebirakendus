@@ -11,12 +11,12 @@ body {
 .wrap {
 	position:relative;
 	min-height: 100%;
-	flex: 1;
 }
 
 .wrap>.container>.container {
 	padding:10px;
 	margin:10px;
+	flex: 1;
 }
 
 .container>.container p{
