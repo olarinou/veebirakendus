@@ -6,15 +6,14 @@ body {
 
 .wrap {
 	flex: 1 1 auto;
-	height:100%;
 }
 
-.wrap>.container>.container {
+.container>.container {
+	height:100%;
 	padding:10px;
 	margin:10px;
 	overflow-x:hidden;
 	overflow-y: auto;
-	height:200px;
 }
 
 .container>.container p{
