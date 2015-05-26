@@ -12,11 +12,12 @@ body {
 	bottom:0px;
 	left:0px;
 	right:0px;
+	position:relative;
 }
 
 .wrap>.container>.container {
 	flex: 1 1 auto;
-	align-content: stretch;
+	position:absolute;
 	height:100%;
 	padding:10px;
 	margin:10px;
