@@ -9,14 +9,13 @@ body {
 
 .container {
 	height: auto;
-	position:relative;
+	position:absolute;
 }
 
 .container>.container {
 	overflow-y: auto;
 	overflow-x:hidden;
 	padding:10px;
-	position:absolute;
 	margin:10px;
 	height:75%;
 }
@@ -112,7 +111,6 @@ h1 {
 
 .nav {
  top:10px;
- position:absolute;
 }
 
 .nav li {
@@ -128,7 +126,6 @@ h1 {
 }
 
 .footer {
-	position:absolute;
 	bottom:0;
 	background-color: orange;
 	padding: 14px 10px;
