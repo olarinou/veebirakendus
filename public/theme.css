@@ -16,6 +16,7 @@ body {
 }
 
 .container>.container {
+	height:100%;
 	padding:10px;
 	margin:10px;
 }
@@ -128,7 +129,6 @@ margin:10px;
 }
 
 .footer {
-	position:absolute;
 	bottom:0;
 	background-color: orange;
 	padding: 14px 10px;
