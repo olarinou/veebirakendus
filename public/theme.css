@@ -12,8 +12,6 @@ body {
 	overflow-y: auto;
 	overflow-x:hidden;
 	padding:10px;
-	flex:2;
-	height:auto;
 	position:absolute;
 	margin:10px;
 }
@@ -108,9 +106,7 @@ h1 {
 }
 
 .nav {
- position:fixed;
  top:10px;
-flex:1;	
 }
 
 .nav li {
@@ -132,5 +128,4 @@ flex:1;
 	padding: 14px 10px;
 	margin: 10px 10px 0px 10px; 
 	text-align: center;
-	flex:3;
 }
