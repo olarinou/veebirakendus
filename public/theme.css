@@ -16,17 +16,12 @@ body {
 	height:100%;
 }
 
-.container {
-	position:relative;
-	height:auto;
-}
-
 .container>.container {
 	overflow-y: auto;
 	overflow-x:hidden;
 	padding:10px;
 	margin:10px;
-	height:100%;
+	position:relative;
 }
 
 .container>.container p{
