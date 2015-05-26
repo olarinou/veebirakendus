@@ -1,26 +1,28 @@
 body {
 	height:100%;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	padding:10px;
+	margin:10px;
 	background-color:  #FFFFFF;
 	display:flex;
 	flex-direction:column;
 }
 
 .wrap {
-	padding:10px;
-	margin:10px;
-	top:0px;
-	bottom:0px;
-	left:0px;
-	right:0px;
 	position:relative;
+	height:auto;
 }
 
-.container>.container {
+.wrap>.container>.container {
 	overflow-y: auto;
 	overflow-x:hidden;
 	padding:10px;
 	margin:10px;
 	height:100%;
+	position:absolute;
 }
 
 .container>.container p{
