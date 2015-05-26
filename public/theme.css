@@ -12,12 +12,12 @@ body {
 	bottom:0px;
 	left:0px;
 	right:0px;
+	height:auto;
 	position:relative;
 }
 
 .wrap>.container>.container {
 	flex: 1 1 auto;
-	position:absolute;
 	height:100%;
 	padding:10px;
 	margin:10px;
@@ -132,7 +132,6 @@ margin:10px;
 
 .footer {
 	bottom:0;
-	position:absolute;
 	background-color: orange;
 	padding: 14px 10px;
 	margin: 10px 10px 0px 10px; 
