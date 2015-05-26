@@ -9,15 +9,15 @@ body {
 }
 
 .wrap {
-	position:relative;
+	position:absolute;
 	min-height: 100%;
+	flex: 1 1 auto;
 }
 
 .wrap>.container>.container {
 	padding:10px;
 	margin:10px;
 	height:100%;
-	flex: 1 1;
 }
 
 .container>.container p{
@@ -129,7 +129,6 @@ margin:10px;
 
 .footer {
 	bottom:0;
-	flex:1;
 	background-color: orange;
 	padding: 14px 10px;
 	margin: 10px 10px 0px 10px; 
