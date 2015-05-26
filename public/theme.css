@@ -1,12 +1,15 @@
 body {
 	overflow:hidden;
 	padding:10px;
-	height:auto;
 	margin:10px;
 	background-color:  #FFFFFF;
 	display:flex;
 	position:relative;
 	flex-direction:column;
+}
+
+.container {
+	height: auto;
 }
 
 .container>.container {
