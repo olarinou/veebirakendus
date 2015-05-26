@@ -5,9 +5,10 @@ body {
 	background-color:  #FFFFFF;
 	display:flex;
 	flex-direction:column;
+	height:100%;
 }
 
-.container {
+.wrap {
 	height: auto;
 	position:relative;
 }
@@ -17,7 +18,7 @@ body {
 	overflow-x:hidden;
 	padding:10px;
 	margin:10px;
-	height:75%;
+	height:100%;
 	position:absolute;
 }
 
