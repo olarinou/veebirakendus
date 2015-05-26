@@ -1,7 +1,7 @@
 @extends('master') 
 @section('main')
 		<div class="container">	
-		<div class="col-xs-12 col-sm-7 col-md-12 col-lg-12">
+		<div class="col-md-8 col-md-offset-2 form-content">
 		<h3 class="heading">Kandidaadid</h3>
 			@include('kandidaadid_db')
 		
