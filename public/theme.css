@@ -123,7 +123,7 @@ margin:10px;
   text-transform: uppercase;
 }
 
-.footer {
+.wrap>.container>.footer {
 	bottom:0;
 	background-color: orange;
 	padding: 14px 10px;
