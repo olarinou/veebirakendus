@@ -9,6 +9,7 @@ body {
 	background-color:  #FFFFFF;
 	display:flex;
 	flex-direction:column;
+	overflow:hidden;
 }
 
 .wrap {
