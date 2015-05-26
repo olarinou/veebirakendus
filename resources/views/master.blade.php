@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('theme.css') }}">
 </head>
 <body>
+	<div class="wrap">
 	<div class="nav">
 	<div class="container">	
 	@if (Auth::check())
@@ -26,6 +27,7 @@
   		<p>Veebivalimised on loodud aine Veebirakenduste loomine korras, 
 		<a href="http://katolilly.tumblr.com/post/109805392949/">kasutatud planeedipiltide allikas.</a></p>
 		</div>
+	</div>
 	</div>
 </body>
 </html>	
