@@ -3,19 +3,18 @@ body {
 	display:flex;
 	flex-direction:column;
 	overflow-x:hidden;
-	overflow-y: hidden;
+	overflow-y: auto;
 }
 
 .wrap {
-	flex: 1 1 auto;
+	
 }
 
 .container>.container {
+	flex: 1 1 auto;
 	height:100%;
 	padding:10px;
 	margin:10px;
-	overflow-x:hidden;
-	overflow-y: auto;
 }
 
 .container>.container p{
