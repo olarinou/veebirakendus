@@ -7,11 +7,11 @@ body {
 }
 
 .wrap {
-	
+	flex: 1 1 auto;	
 }
 
 .container>.container {
-	flex: 1 1 auto;
+	flex: 2;
 	height:100%;
 	padding:10px;
 	margin:10px;
