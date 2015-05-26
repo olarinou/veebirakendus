@@ -4,12 +4,12 @@ body {
 	margin:10px;
 	background-color:  #FFFFFF;
 	display:flex;
-	position:relative;
 	flex-direction:column;
 }
 
 .container {
-	height: 100%;
+	height: auto;
+	position:relative;
 }
 
 .container>.container {
