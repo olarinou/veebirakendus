@@ -4,7 +4,6 @@ body {
 	background-color:  #FFFFFF;
 	display:flex;
 	flex-direction:column;
-	overflow:hidden;
 }
 
 .wrap {
@@ -14,6 +13,12 @@ body {
 	right:0px;
 	position:absolute;
 	height:100%;
+	overflow:hidden;
+}
+
+.container {
+	position:relative;
+	height:auto;
 }
 
 .container>.container {
@@ -21,7 +26,7 @@ body {
 	overflow-x:hidden;
 	padding:10px;
 	margin:10px;
-	position:relative;
+	height:100%;
 }
 
 .container>.container p{
