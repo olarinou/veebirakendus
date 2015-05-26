@@ -1,14 +1,13 @@
 body {
-	overflow:hidden;
 	height:100%;
-	padding:10px;
-	margin:10px;
 	background-color:  #FFFFFF;
 	display:flex;
 	flex-direction:column;
 }
 
 .wrap {
+	padding:10px;
+	margin:10px;
 	top:0px;
 	bottom:0px;
 	position:absolute;
